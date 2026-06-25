@@ -1,0 +1,23 @@
+schema: LEO-SCHEMA-TEMP-SPECIALIST-v1.0
+# Template de composição de especialista temporário (lifetime: task_only).
+temporary_specialist:
+  id: ""
+  task_id: ""
+  role: ""
+  goal: ""
+  domain: ""            # build | communicate | operate
+  use_case: ""
+  primary_skill: ""     # exatamente 1
+  auxiliary_skills: []  # só por dependência real
+  references: []
+  tools: []
+  connectors: []
+  method: []
+  constraints: []
+  quality_criteria: []
+  guardrails: []
+  stop_conditions: []
+  rationale:
+    selected_because: []
+    rejected_alternatives: []
+  lifetime: task_only

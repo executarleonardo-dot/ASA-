@@ -1,0 +1,32 @@
+schema: LEO-CONFIG-MEMORY-v1.0
+document_type: config
+source: "AGENT_BUILD_SPEC §18, §19.2; Blueprint <MEMORY>"
+
+memory_policy:
+  write_requires_confirmation: true
+  store_only_durable_decisions: true
+  store_full_conversations: false
+  maintain_source_provenance: true
+  prevent_stale_memory_use: true
+
+operations:
+  consult: { approval_required: false }
+  write:   { approval_required: true }
+  update:  { approval_required: true }
+  forget:  { approval_required: true }
+
+result_classification:
+  transient:
+    destination: chat
+    requires_confirmation: false
+  project_specific:
+    destination: project_knowledge
+    requires_confirmation: false
+  permanent_preference:
+    destination: memory
+    requires_confirmation: true
+  reusable_procedure:
+    destination: skill_backlog
+    requires_validation: true
+
+runtime_note: "[GAP-RUNTIME] Disponibilidade real de Memory verificada pelo Environment Resolver (GR-01)."

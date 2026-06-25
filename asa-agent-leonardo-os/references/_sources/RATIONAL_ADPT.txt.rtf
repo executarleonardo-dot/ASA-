@@ -1,0 +1,907 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling1\cocoaplatform1{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\froman\fcharset0 TimesNewRomanPS-BoldMT;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue238;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sim. A adapta\'e7\'e3o correta n\'e3o \'e9 \'93copiar o Fugu para dentro do {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}}\'94. \'c9 criar um 
+\f1\b \cf2 \strokec2 orquestrador nativo do ecossistema Claude
+\f0\b0 \cf2 \strokec2 , cujo objeto de especializa\'e7\'e3o seja o pr\'f3prio ambiente {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}}, Anthropic e o contexto operacional do usu\'e1rio.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 1. Ideia central\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 O {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}} n\'e3o deveria apenas responder como especialista em um tema. Ele deveria aprender a responder como:\
+especialista em configurar, combinar e operar os pr\'f3prios recursos do Claude para resolver aquele tema.\
+Isso muda a arquitetura.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 MODELO TRADICIONAL\
+\
+Usu\'e1rio\
+  \uc0\u8595 \
+Claude recebe um papel fixo\
+  \uc0\u8595 \
+Claude responde como especialista\
+MODELO ORQUESTRADOR\
+\
+Usu\'e1rio\
+  \uc0\u8595 \
+Claude interpreta a necessidade\
+  \uc0\u8595 \
+Claude l\'ea o ambiente dispon\'edvel\
+  \uc0\u8595 \
+Claude identifica contexto e restri\'e7\'f5es\
+  \uc0\u8595 \
+Claude monta a especializa\'e7\'e3o necess\'e1ria\
+  \uc0\u8595 \
+Claude seleciona recursos, skills e fontes\
+  \uc0\u8595 \
+Claude executa o workflow\
+  \uc0\u8595 \
+Claude entrega e atualiza o contexto\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Portanto, o \'93especialista\'94 n\'e3o seria uma persona armazenada. Seria uma 
+\f1\b \cf2 \strokec2 configura\'e7\'e3o din\'e2mica produzida pela combina\'e7\'e3o entre contexto, capacidade, workflow e evid\'eancia
+\f0\b0 \cf2 \strokec2 .\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 2. First principles\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 Princ\'edpio 1 \'97 Claude n\'e3o conhece automaticamente todo o ambiente\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Mesmo dentro do {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}}, existem diferentes camadas:\
+\pard\pardeftab720\partightenfactor0
+\ls1\ilvl0\cf2 \strokec2 {\listtext	\'95	}instru\'e7\'f5es de perfil;\
+{\listtext	\'95	}prefer\'eancias e mem\'f3ria;\
+{\listtext	\'95	}instru\'e7\'f5es do projeto;\
+{\listtext	\'95	}conhecimento do projeto;\
+{\listtext	\'95	}chats anteriores;\
+{\listtext	\'95	}arquivos;\
+{\listtext	\'95	}Skills;\
+{\listtext	\'95	}conectores;\
+{\listtext	\'95	}ferramentas;\
+{\listtext	\'95	}modelo selecionado;\
+{\listtext	\'95	}recursos dispon\'edveis no plano;\
+{\listtext	\'95	}contexto da conversa atual.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Essas camadas t\'eam fun\'e7\'f5es diferentes e n\'e3o devem ser misturadas. A Anthropic diferencia explicitamente instru\'e7\'f5es de perfil, instru\'e7\'f5es de projeto, estilos, mem\'f3ria e busca em conversas passadas. Projetos tamb\'e9m funcionam como espa\'e7os independentes, com hist\'f3rico, instru\'e7\'f5es e base de conhecimento pr\'f3prios.  \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f1\b\fs28 \cf2 \strokec2 Dedu\'e7\'e3o\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 Claude s\'f3 pode se especializar corretamente\
+se souber:\
+\
+1. quem \'e9 o usu\'e1rio;\
+2. em qual projeto est\'e1;\
+3. qual problema est\'e1 sendo tratado;\
+4. quais recursos est\'e3o dispon\'edveis;\
+5. quais regras governam a execu\'e7\'e3o.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Logo, antes de executar, o orquestrador precisa construir um 
+\f1\b \cf2 \strokec2 estado operacional do ambiente
+\f0\b0 \cf2 \strokec2 .\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Princ\'edpio 2 \'97 Personaliza\'e7\'e3o n\'e3o \'e9 especializa\'e7\'e3o\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Personaliza\'e7\'e3o responde:\
+\'93Como Claude deve trabalhar com Leonardo?\'94\
+Especializa\'e7\'e3o responde:\
+\'93Que compet\'eancias e recursos Claude precisa mobilizar para esta tarefa?\'94\
+S\'e3o coisas diferentes.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 PERSONALIZA\'c7\'c3O\
+\uc0\u9500 \u9472 \u9472  linguagem\
+\uc0\u9500 \u9472 \u9472  formato\
+\uc0\u9500 \u9472 \u9472  limites cognitivos\
+\uc0\u9500 \u9472 \u9472  prefer\'eancias\
+\uc0\u9500 \u9472 \u9472  objetivos permanentes\
+\uc0\u9492 \u9472 \u9472  regras de intera\'e7\'e3o\
+\
+ESPECIALIZA\'c7\'c3O\
+\uc0\u9500 \u9472 \u9472  dom\'ednio\
+\uc0\u9500 \u9472 \u9472  m\'e9todo\
+\uc0\u9500 \u9472 \u9472  ferramentas\
+\uc0\u9500 \u9472 \u9472  fontes\
+\uc0\u9500 \u9472 \u9472  crit\'e9rios t\'e9cnicos\
+\uc0\u9492 \u9472 \u9472  workflow\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 A personaliza\'e7\'e3o deve permanecer relativamente est\'e1vel. A especializa\'e7\'e3o deve ser montada dinamicamente.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Princ\'edpio 3 \'97 O ambiente deve participar da decis\'e3o\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Um orquestrador comum escolhe agentes pelo problema.\
+Um orquestrador para {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}} precisa escolher a solu\'e7\'e3o por:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 SOLU\'c7\'c3O ADEQUADA\
+=\
+problema\
++\
+usu\'e1rio\
++\
+projeto\
++\
+recursos Claude dispon\'edveis\
++\
+dados acess\'edveis\
++\
+restri\'e7\'f5es\
++\
+Definition of Done\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Exemplo:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 TAREFA\
+\'93Transformar uma ideia em produto\'94\
+\
+O orquestrador n\'e3o deve assumir imediatamente:\
+\'93usar Product Manager\'94\
+\
+Ele deve verificar:\
+\uc0\u9500 \u9472 \u9472  existe projeto Claude para esse produto?\
+\uc0\u9500 \u9472 \u9472  h\'e1 arquivos de descoberta?\
+\uc0\u9500 \u9472 \u9472  existe Skill de Product Discovery?\
+\uc0\u9500 \u9472 \u9472  Linear est\'e1 conectado?\
+\uc0\u9500 \u9472 \u9472  GitHub est\'e1 conectado?\
+\uc0\u9500 \u9472 \u9472  o usu\'e1rio quer diagn\'f3stico ou implementa\'e7\'e3o?\
+\uc0\u9500 \u9472 \u9472  existe Gate que impede produ\'e7\'e3o?\
+\uc0\u9492 \u9472 \u9472  qual \'e9 o entreg\'e1vel esperado?\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Conectores permitem que Claude recupere dados e execute a\'e7\'f5es em servi\'e7os conectados; Skills fornecem instru\'e7\'f5es, scripts e recursos reutiliz\'e1veis para tarefas espec\'edficas. Esses elementos s\'e3o complementares: o conector fornece acesso; a Skill ensina como trabalhar com esse acesso.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 3. A mudan\'e7a arquitetural principal\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 A macro-personaliza\'e7\'e3o em cascata n\'e3o deve ser apenas um formul\'e1rio que preenche um prompt.\
+Ela deve funcionar como um 
+\f1\b \cf2 \strokec2 sistema de resolu\'e7\'e3o de contexto
+\f0\b0 \cf2 \strokec2 .\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 MACRO-PERSONALIZA\'c7\'c3O\
+n\'e3o \'e9:\
+\'93colocar todas as informa\'e7\'f5es no prompt\'94\
+\
+\'e9:\
+\'93resolver progressivamente quais informa\'e7\'f5es\
+s\'e3o relevantes para esta execu\'e7\'e3o\'94\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Essa diferen\'e7a \'e9 fundamental porque excesso de contexto tamb\'e9m prejudica:\
+\pard\pardeftab720\partightenfactor0
+\ls2\ilvl0\cf2 \strokec2 {\listtext	\'95	}aumenta ru\'eddo;\
+{\listtext	\'95	}cria conflitos de instru\'e7\'e3o;\
+{\listtext	\'95	}ocupa janela de contexto;\
+{\listtext	\'95	}ativa informa\'e7\'f5es irrelevantes;\
+{\listtext	\'95	}dificulta a sele\'e7\'e3o do pr\'f3ximo passo.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Em Projetos, o Claude pode usar RAG para buscar apenas partes relevantes da base de conhecimento quando o volume cresce, em vez de carregar todo o conte\'fado de uma vez.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 4. Macro-personaliza\'e7\'e3o em cascata adaptada ao {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}}\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 A cascata deveria seguir a ordem abaixo.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 0 \'97 Constitui\'e7\'e3o e governan\'e7a\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 \'c9 a camada que nunca muda por tarefa.\
+Define:\
+\pard\pardeftab720\partightenfactor0
+\ls3\ilvl0\cf2 \strokec2 {\listtext	\'95	}seguran\'e7a;\
+{\listtext	\'95	}verdade e evid\'eancia;\
+{\listtext	\'95	}proibi\'e7\'e3o de inventar;\
+{\listtext	\'95	}confirma\'e7\'e3o antes de a\'e7\'f5es externas;\
+{\listtext	\'95	}tratamento de dados;\
+{\listtext	\'95	}n\'edveis de autonomia;\
+{\listtext	\'95	}registro de decis\'f5es;\
+{\listtext	\'95	}regras de mem\'f3ria;\
+{\listtext	\'95	}crit\'e9rios de qualidade;\
+{\listtext	\'95	}pol\'edtica de interrup\'e7\'e3o;\
+{\listtext	\'95	}limites do orquestrador.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 CAMADA 0\
+\'93Como o sistema deve se comportar,\
+independentemente do trabalho?\'94\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Essa camada deve dominar todas as demais.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 1 \'97 Identidade operacional do usu\'e1rio\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 N\'e3o \'e9 uma biografia completa. \'c9 apenas o que modifica a execu\'e7\'e3o:\
+\pard\pardeftab720\partightenfactor0
+\ls4\ilvl0\cf2 \strokec2 {\listtext	\'95	}papel;\
+{\listtext	\'95	}n\'edvel t\'e9cnico;\
+{\listtext	\'95	}capacidade de tempo;\
+{\listtext	\'95	}ferramentas preferidas;\
+{\listtext	\'95	}formato cognitivo;\
+{\listtext	\'95	}linguagem;\
+{\listtext	\'95	}toler\'e2ncia a risco;\
+{\listtext	\'95	}modo de decis\'e3o;\
+{\listtext	\'95	}prefer\'eancias de entrega.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 CAMADA 1\
+\'93Para quem o Claude est\'e1 trabalhando?\'94\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 No seu caso, por exemplo:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 usu\'e1rio:\
+  papel: fundador e product owner\
+  perfil_tecnico: non-dev power user\
+  capacidade: 25 horas por semana\
+  prefer\'eancia:\
+    - \'e1rvore plain text\
+    - 3 etapas\
+    - pr\'f3xima a\'e7\'e3o expl\'edcita\
+    - baixa carga cognitiva\
+  governan\'e7a:\
+    - n\'e3o inventar\
+    - distinguir fato, hip\'f3tese e lacuna\
+    - n\'e3o produzir c\'f3digo antes do gate\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Isso poderia residir principalmente em prefer\'eancias de perfil e mem\'f3ria, porque atravessa diferentes projetos. A Anthropic recomenda usar instru\'e7\'f5es de perfil para prefer\'eancias gerais e instru\'e7\'f5es de projeto para necessidades espec\'edficas daquele espa\'e7o.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 2 \'97 Ambiente Claude dispon\'edvel\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Essa \'e9 a camada que falta em muitos templates.\
+O orquestrador deve reconhecer quais capacidades realmente existem naquela inst\'e2ncia:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 AMBIENTE CLAUDE\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  plano e permiss\'f5es\
+\uc0\u9500 \u9472 \u9472  modelo dispon\'edvel\
+\uc0\u9500 \u9472 \u9472  Projects\
+\uc0\u9500 \u9472 \u9472  Project Instructions\
+\uc0\u9500 \u9472 \u9472  Project Knowledge\
+\uc0\u9500 \u9472 \u9472  mem\'f3ria\
+\uc0\u9500 \u9472 \u9472  chat search\
+\uc0\u9500 \u9472 \u9472  Skills instaladas\
+\uc0\u9500 \u9472 \u9472  conectores ativos\
+\uc0\u9500 \u9472 \u9472  plugins ou pacote Small Business\
+\uc0\u9500 \u9472 \u9472  Artifacts\
+\uc0\u9500 \u9472 \u9472  an\'e1lise de arquivos\
+\uc0\u9500 \u9472 \u9472  browser/computer use, quando dispon\'edvel\
+\uc0\u9492 \u9472 \u9472  integra\'e7\'f5es como GitHub, Drive, Gmail e Calendar\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 A especializa\'e7\'e3o s\'f3 pode usar recursos presentes.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 capacidade declarada \uc0\u8800  capacidade dispon\'edvel\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Por exemplo, n\'e3o adianta o orquestrador criar um workflow dependente do GitHub se esse conector n\'e3o estiver habilitado. A integra\'e7\'e3o com GitHub pode adicionar arquivos e pastas selecionados ao conhecimento do Projeto e sincroniz\'e1-los; os conectores do Google Workspace podem acessar documentos, e-mail e calend\'e1rio conforme permiss\'f5es e disponibilidade.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 3 \'97 Projeto atual\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Aqui Claude identifica o sistema de trabalho em que a solicita\'e7\'e3o est\'e1 inserida.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 PROJETO\
+\uc0\u9500 \u9472 \u9472  objetivo\
+\uc0\u9500 \u9472 \u9472  escopo\
+\uc0\u9500 \u9472 \u9472  estado atual\
+\uc0\u9500 \u9472 \u9472  fonte de verdade\
+\uc0\u9500 \u9472 \u9472  documentos\
+\uc0\u9500 \u9472 \u9472  decis\'f5es anteriores\
+\uc0\u9500 \u9472 \u9472  backlog\
+\uc0\u9500 \u9472 \u9472  restri\'e7\'f5es\
+\uc0\u9500 \u9472 \u9472  Definition of Done\
+\uc0\u9492 \u9472 \u9472  integra\'e7\'f5es autorizadas\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Essa camada deve viver principalmente no Claude Project:\
+\pard\pardeftab720\partightenfactor0
+\ls5\ilvl0\cf2 \strokec2 {\listtext	\'95	}Project Instructions para regras locais;\
+{\listtext	\'95	}Project Knowledge para documentos;\
+{\listtext	\'95	}chats para hist\'f3rico de trabalho;\
+{\listtext	\'95	}conectores para fontes atualizadas.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Projetos s\'e3o espa\'e7os autocontidos, com instru\'e7\'f5es pr\'f3prias, chats e conhecimento espec\'edfico.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 4 \'97 Caso de uso\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 \'c9 a primeira camada altamente vari\'e1vel.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 CASO DE USO\
+\uc0\u9500 \u9472 \u9472  diagnosticar\
+\uc0\u9500 \u9472 \u9472  pesquisar\
+\uc0\u9500 \u9472 \u9472  decidir\
+\uc0\u9500 \u9472 \u9472  planejar\
+\uc0\u9500 \u9472 \u9472  escrever\
+\uc0\u9500 \u9472 \u9472  construir\
+\uc0\u9500 \u9472 \u9472  revisar\
+\uc0\u9500 \u9472 \u9472  automatizar\
+\uc0\u9492 \u9472 \u9472  operar\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 O mesmo projeto pode exigir especializa\'e7\'f5es diferentes.\
+Exemplo:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 DESK-OS\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  pedido: validar demanda\
+\uc0\u9474    \u9492 \u9472 \u9472  especialista montado:\
+\uc0\u9474        product discovery + pesquisa + an\'e1lise\
+\
+\uc0\u9500 \u9472 \u9472  pedido: desenhar folha A4\
+\uc0\u9474    \u9492 \u9472 \u9472  especialista montado:\
+\uc0\u9474        information design + print design + acessibilidade\
+\
+\uc0\u9492 \u9472 \u9472  pedido: integrar Linear\
+    \uc0\u9492 \u9472 \u9472  especialista montado:\
+        arquitetura + API + workflow operacional\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 N\'e3o deve existir uma \'fanica persona \'93Especialista DESK-OS\'94 tentando fazer tudo.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 5 \'97 Problema concreto\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Aqui o orquestrador deixa de classificar apenas o dom\'ednio e passa a classificar a estrutura do problema.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 PROBLEMA\
+\uc0\u9500 \u9472 \u9472  objetivo\
+\uc0\u9500 \u9472 \u9472  estado inicial\
+\uc0\u9500 \u9472 \u9472  estado desejado\
+\uc0\u9500 \u9472 \u9472  vari\'e1veis conhecidas\
+\uc0\u9500 \u9472 \u9472  incertezas\
+\uc0\u9500 \u9472 \u9472  depend\'eancias\
+\uc0\u9500 \u9472 \u9472  risco\
+\uc0\u9500 \u9472 \u9472  reversibilidade\
+\uc0\u9500 \u9472 \u9472  evid\'eancia necess\'e1ria\
+\uc0\u9492 \u9472 \u9472  crit\'e9rio de conclus\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Essa camada determina a intensidade do racioc\'ednio.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 problema simples\
+\uc0\u9492 \u9472 \u9472  resposta direta\
+\
+problema especializado\
+\uc0\u9492 \u9472 \u9472  uma Skill\
+\
+problema composto\
+\uc0\u9492 \u9472 \u9472  combina\'e7\'e3o de Skills\
+\
+problema com dados externos\
+\uc0\u9492 \u9472 \u9472  Skills + conectores\
+\
+problema de alto risco\
+\uc0\u9492 \u9472 \u9472  execu\'e7\'e3o + cr\'edtica + verifica\'e7\'e3o\
+\
+problema incompleto\
+\uc0\u9492 \u9472 \u9472  descoberta antes da produ\'e7\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 6 \'97 Montagem din\'e2mica do especialista\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Somente depois das camadas anteriores Claude deve definir:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 ESPECIALISTA TEMPOR\'c1RIO\
+\uc0\u9500 \u9472 \u9472  papel\
+\uc0\u9500 \u9472 \u9472  objetivo\
+\uc0\u9500 \u9472 \u9472  conhecimento relevante\
+\uc0\u9500 \u9472 \u9472  Skill principal\
+\uc0\u9500 \u9472 \u9472  Skills auxiliares\
+\uc0\u9500 \u9472 \u9472  ferramentas\
+\uc0\u9500 \u9472 \u9472  conectores\
+\uc0\u9500 \u9472 \u9472  m\'e9todo\
+\uc0\u9500 \u9472 \u9472  crit\'e9rios de qualidade\
+\uc0\u9492 \u9472 \u9472  limites\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Esse especialista existe apenas para aquela tarefa ou workflow.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 ESPECIALISTA\
+=\
+compet\'eancia necess\'e1ria\
++\
+contexto selecionado\
++\
+m\'e9todo adequado\
++\
+recursos dispon\'edveis\
++\
+contrato de sa\'edda\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Isso evita personas infladas, gen\'e9ricas e permanentes.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 7 \'97 Workflow\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 A especializa\'e7\'e3o deve gerar um plano de execu\'e7\'e3o, n\'e3o apenas um tom de voz.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 WORKFLOW\
+\uc0\u9500 \u9472 \u9472  entrada\
+\uc0\u9500 \u9472 \u9472  etapas\
+\uc0\u9500 \u9472 \u9472  depend\'eancias\
+\uc0\u9500 \u9472 \u9472  ferramentas por etapa\
+\uc0\u9500 \u9472 \u9472  evid\'eancias\
+\uc0\u9500 \u9472 \u9472  gates\
+\uc0\u9500 \u9472 \u9472  entreg\'e1veis\
+\uc0\u9500 \u9472 \u9472  tratamento de falha\
+\uc0\u9492 \u9472 \u9472  pr\'f3xima a\'e7\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Aqui aparece a inspira\'e7\'e3o no Fugu:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 n\'e3o selecionar apenas \'93quem responde\'94\
+mas decidir:\
+\uc0\u9500 \u9472 \u9472  qual tarefa precisa ser feita;\
+\uc0\u9500 \u9472 \u9472  em qual ordem;\
+\uc0\u9500 \u9472 \u9472  por qual capacidade;\
+\uc0\u9500 \u9472 \u9472  com quais dados;\
+\uc0\u9500 \u9472 \u9472  com qual valida\'e7\'e3o;\
+\uc0\u9492 \u9472 \u9472  quando parar.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Camada 8 \'97 Estado e aprendizado\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 Ap\'f3s a execu\'e7\'e3o, nem tudo deve virar mem\'f3ria.\
+O orquestrador precisa classificar o resultado:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 RESULTADO\
+\uc0\u9500 \u9472 \u9472  transit\'f3rio\
+\uc0\u9474    \u9492 \u9472 \u9472  permanece no chat\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  espec\'edfico do projeto\
+\uc0\u9474    \u9492 \u9472 \u9472  vai para Project Knowledge ou registro do projeto\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  prefer\'eancia permanente\
+\uc0\u9474    \u9492 \u9472 \u9472  pode atualizar perfil ou mem\'f3ria\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  procedimento reutiliz\'e1vel\
+\uc0\u9474    \u9492 \u9472 \u9472  pode virar Skill\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  a\'e7\'e3o operacional\
+    \uc0\u9492 \u9472 \u9472  pode ser registrada no sistema conectado\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Essa classifica\'e7\'e3o impede que a mem\'f3ria fique contaminada por decis\'f5es tempor\'e1rias.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 5. O que significa \'93transformar {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}} em seu pr\'f3prio especialista\'94\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 N\'e3o significa permitir que Claude altere seu modelo-base.\
+Significa construir uma camada que fa\'e7a Claude 
+\f1\b \cf2 \strokec2 configurar sua pr\'f3pria atua\'e7\'e3o
+\f0\b0 \cf2 \strokec2  dentro dos recursos dispon\'edveis.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 AUTOESPECIALIZA\'c7\'c3O OPERACIONAL\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  inspecionar contexto\
+\uc0\u9500 \u9472 \u9472  identificar capacidades dispon\'edveis\
+\uc0\u9500 \u9472 \u9472  recuperar conhecimento relevante\
+\uc0\u9500 \u9472 \u9472  escolher Skills\
+\uc0\u9500 \u9472 \u9472  selecionar conectores\
+\uc0\u9500 \u9472 \u9472  definir m\'e9todo\
+\uc0\u9500 \u9472 \u9472  montar workflow\
+\uc0\u9500 \u9472 \u9472  aplicar gates\
+\uc0\u9492 \u9472 \u9472  produzir o entreg\'e1vel\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 \'c9 uma autoespecializa\'e7\'e3o limitada e governada.\
+Claude n\'e3o deveria decidir livremente tudo. Ele deveria decidir dentro de um espa\'e7o autorizado:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 AUTONOMIA\
+\uc0\u9500 \u9472 \u9472  pode selecionar Skill\
+\uc0\u9500 \u9472 \u9472  pode recuperar arquivos\
+\uc0\u9500 \u9472 \u9472  pode propor workflow\
+\uc0\u9500 \u9472 \u9472  pode escolher profundidade\
+\uc0\u9500 \u9472 \u9472  pode criar Artifact\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  precisa confirmar a\'e7\'f5es externas sens\'edveis\
+\uc0\u9500 \u9472 \u9472  n\'e3o pode alterar governan\'e7a\
+\uc0\u9500 \u9472 \u9472  n\'e3o pode inventar conectores\
+\uc0\u9500 \u9472 \u9472  n\'e3o pode presumir permiss\'f5es\
+\uc0\u9492 \u9472 \u9472  n\'e3o deve gravar mem\'f3ria sem regra definida\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 6. Arquitetura conceitual\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 CLAUDE.AI ORCHESTRATOR\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  1. ENVIRONMENT RESOLVER\
+\uc0\u9474    \u9500 \u9472 \u9472  modelo\
+\uc0\u9474    \u9500 \u9472 \u9472  plano\
+\uc0\u9474    \u9500 \u9472 \u9472  ferramentas\
+\uc0\u9474    \u9500 \u9472 \u9472  conectores\
+\uc0\u9474    \u9500 \u9472 \u9472  Skills\
+\uc0\u9474    \u9492 \u9472 \u9472  limites\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  2. CONTEXT RESOLVER\
+\uc0\u9474    \u9500 \u9472 \u9472  perfil\
+\uc0\u9474    \u9500 \u9472 \u9472  mem\'f3ria\
+\uc0\u9474    \u9500 \u9472 \u9472  Project Instructions\
+\uc0\u9474    \u9500 \u9472 \u9472  Project Knowledge\
+\uc0\u9474    \u9500 \u9472 \u9472  chat atual\
+\uc0\u9474    \u9492 \u9472 \u9472  fontes conectadas\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  3. INTENT CLASSIFIER\
+\uc0\u9474    \u9500 \u9472 \u9472  objetivo\
+\uc0\u9474    \u9500 \u9472 \u9472  caso de uso\
+\uc0\u9474    \u9500 \u9472 \u9472  dom\'ednio\
+\uc0\u9474    \u9500 \u9472 \u9472  complexidade\
+\uc0\u9474    \u9492 \u9472 \u9472  risco\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  4. SPECIALIST COMPOSER\
+\uc0\u9474    \u9500 \u9472 \u9472  papel tempor\'e1rio\
+\uc0\u9474    \u9500 \u9472 \u9472  m\'e9todo\
+\uc0\u9474    \u9500 \u9472 \u9472  Skills\
+\uc0\u9474    \u9500 \u9472 \u9472  ferramentas\
+\uc0\u9474    \u9492 \u9472 \u9472  crit\'e9rios\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  5. WORKFLOW PLANNER\
+\uc0\u9474    \u9500 \u9472 \u9472  decomposi\'e7\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  depend\'eancias\
+\uc0\u9474    \u9500 \u9472 \u9472  paraleliza\'e7\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  gates\
+\uc0\u9474    \u9492 \u9472 \u9472  Definition of Done\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  6. EXECUTION CONTROLLER\
+\uc0\u9474    \u9500 \u9472 \u9472  recupera\'e7\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  an\'e1lise\
+\uc0\u9474    \u9500 \u9472 \u9472  produ\'e7\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  uso de ferramentas\
+\uc0\u9474    \u9492 \u9472 \u9472  tratamento de erros\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  7. QUALITY EVALUATOR\
+\uc0\u9474    \u9500 \u9472 \u9472  precis\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  personaliza\'e7\'e3o\
+\uc0\u9474    \u9500 \u9472 \u9472  evid\'eancia\
+\uc0\u9474    \u9500 \u9472 \u9472  completude\
+\uc0\u9474    \u9492 \u9472 \u9472  executabilidade\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  8. STATE MANAGER\
+    \uc0\u9500 \u9472 \u9472  resposta\
+    \uc0\u9500 \u9472 \u9472  Artifact\
+    \uc0\u9500 \u9472 \u9472  registro do projeto\
+    \uc0\u9500 \u9472 \u9472  mem\'f3ria candidata\
+    \uc0\u9492 \u9472 \u9472  pr\'f3xima a\'e7\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 7. Onde cada elemento deve residir\cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrt\brdrs\brdrw20\brdrcf2 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\qc\partightenfactor0
+
+\fs24 \cf2 \strokec2 Elemento\cf2 \strokec2 \cell 
+\pard\intbl\itap1\pardeftab720\sa240\qc\partightenfactor0
+\cf2 \strokec2 Local mais adequado\cf2 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+
+\f0\b0 \cf2 \strokec2 Regras universais do usu\'e1rio\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Profile instructions\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Prefer\'eancias dur\'e1veis\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Memory/profile preferences\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Regras do Leonardo OS\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Skill orquestradora\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Regras espec\'edficas do produto\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Project Instructions\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Documenta\'e7\'e3o do produto\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Project Knowledge\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 M\'e9todos reutiliz\'e1veis\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Skills\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Dados externos atuais\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Connectors\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Trabalho e racioc\'ednio atual\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Chat\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Entreg\'e1vel edit\'e1vel\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Artifact\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 A\'e7\'e3o no sistema operacional\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Conector autorizado\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrb\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth6900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7760\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Hist\'f3rico formal de decis\'e3o\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Documento ou sistema de registro\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Artifacts servem como \'e1rea separada para conte\'fados, ferramentas e experi\'eancias compartilh\'e1veis, mas n\'e3o substituem a base de conhecimento, a mem\'f3ria nem o sistema de registro.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 8. O erro que deve ser evitado\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 O maior risco seria produzir uma \'93mega-Skill\'94 com:\
+\pard\pardeftab720\partightenfactor0
+\ls6\ilvl0\cf2 \strokec2 {\listtext	\'95	}toda a biografia;\
+{\listtext	\'95	}todos os projetos;\
+{\listtext	\'95	}todas as regras;\
+{\listtext	\'95	}todos os m\'e9todos;\
+{\listtext	\'95	}todas as ferramentas;\
+{\listtext	\'95	}todos os especialistas;\
+{\listtext	\'95	}todos os templates.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Isso criaria um sistema monol\'edtico.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 MEGA-SKILL\
+\uc0\u9500 \u9472 \u9472  muita instru\'e7\'e3o ativa\
+\uc0\u9500 \u9472 \u9472  conflitos\
+\uc0\u9500 \u9472 \u9472  baixa previsibilidade\
+\uc0\u9500 \u9472 \u9472  dif\'edcil manuten\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  contexto desperdi\'e7ado\
+\uc0\u9492 \u9472 \u9472  especializa\'e7\'e3o aparente, n\'e3o real\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 A arquitetura correta \'e9 progressiva:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 N\'daCLEO PEQUENO\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  resolve ambiente\
+\uc0\u9500 \u9472 \u9472  resolve contexto\
+\uc0\u9500 \u9472 \u9472  classifica problema\
+\uc0\u9492 \u9472 \u9472  chama o menor recurso suficiente\
+       \uc0\u9474 \
+       \uc0\u9660 \
+RECURSOS SOB DEMANDA\
+\uc0\u9500 \u9472 \u9472  Skill\
+\uc0\u9500 \u9472 \u9472  refer\'eancia\
+\uc0\u9500 \u9472 \u9472  arquivo\
+\uc0\u9500 \u9472 \u9472  conector\
+\uc0\u9500 \u9472 \u9472  workflow\
+\uc0\u9492 \u9472 \u9472  especialista tempor\'e1rio\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0 \cf2 \strokec2 Isso est\'e1 alinhado ao modelo das Agent Skills: pastas modulares com instru\'e7\'f5es, scripts e recursos carregados conforme a necessidade, em vez de colocar tudo permanentemente no prompt.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf2 \strokec2 9. Rationale final\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 A racionalidade completa \'e9:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 Claude j\'e1 possui intelig\'eancia geral\
+        \uc0\u9474 \
+        \uc0\u9660 \
+mas intelig\'eancia geral n\'e3o cont\'e9m\
+automaticamente contexto operacional\
+        \uc0\u9474 \
+        \uc0\u9660 \
+o ambiente Claude cont\'e9m diferentes\
+fontes de contexto e capacidades\
+        \uc0\u9474 \
+        \uc0\u9660 \
+essas fontes precisam ser resolvidas\
+e hierarquizadas por tarefa\
+        \uc0\u9474 \
+        \uc0\u9660 \
+a macro-personaliza\'e7\'e3o fornece\
+identidade, governan\'e7a e contexto\
+        \uc0\u9474 \
+        \uc0\u9660 \
+o orquestrador seleciona apenas\
+as informa\'e7\'f5es e recursos relevantes\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Claude comp\'f5e um especialista tempor\'e1rio\
+        \uc0\u9474 \
+        \uc0\u9660 \
+o especialista executa um workflow\
+com evid\'eancias, gates e Definition of Done\
+        \uc0\u9474 \
+        \uc0\u9660 \
+o resultado \'e9 classificado e devolvido\
+ao lugar correto do sistema\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf2 \strokec2 Regra-mestra\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \strokec2 O orquestrador n\'e3o deve ensinar Claude a ser permanentemente todos os especialistas. Deve ensin\'e1-lo a identificar qual especialista precisa se tornar, usando quais recursos do pr\'f3prio {\field{\*\fldinst{HYPERLINK "http://claude.ai/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Claude.ai}}, para qual usu\'e1rio, projeto, problema e Definition of Done.\
+O seu 
+\f1\b \cf2 \strokec2 Leonardo OS Orchestrator
+\f0\b0 \cf2 \strokec2 , portanto, seria menos um agente central que \'93faz tudo\'94 e mais um 
+\f1\b \cf2 \strokec2 compilador de contexto e capacidades
+\f0\b0 \cf2 \strokec2 :\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 CONTEXTO DO LEONARDO\
++\
+AMBIENTE CLAUDE\
++\
+PROBLEMA ATUAL\
++\
+STACK DISPON\'cdVEL\
++\
+GOVERNAN\'c7A\
+        \uc0\u9474 \
+        \uc0\u9660 \
+ESPECIALISTA TEMPOR\'c1RIO\
++\
+WORKFLOW ADEQUADO\
++\
+ENTREG\'c1VEL VERIFIC\'c1VEL\
+}

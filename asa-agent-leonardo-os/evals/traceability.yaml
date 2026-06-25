@@ -1,0 +1,31 @@
+schema: LEO-EVAL-v1.0
+name: traceability
+source: "AGENT_BUILD_SPEC §19, §30"
+
+rule: "100% das execuções produzem execution_trace."
+
+required_trace_fields:
+  - execution_id
+  - timestamp
+  - user_request
+  - intent
+  - workflow
+  - specialist
+  - resource_selection
+  - gates
+  - evidence
+  - result_classification
+  - next_action
+  - final_status
+
+cases:
+  - input: "Crie uma Skill para diagnosticar uma PME."
+    expect: trace_present
+    expect_fields_nonempty: [intent, workflow, resource_selection, next_action]
+  - input: "Gere o handoff para o DeskOS."
+    expect: trace_present
+    expect: deskos_handoff_id_present
+
+fail_if:
+  - "execução sem trace"
+  - "seleção de recurso sem selection_rationale"

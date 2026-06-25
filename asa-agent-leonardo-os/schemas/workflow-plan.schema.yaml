@@ -1,0 +1,30 @@
+schema: LEO-SCHEMA-WORKFLOW-PLAN-v1.0
+document_type: schema
+title: "Workflow Plan"
+source: "AGENT_BUILD_SPEC §9 (Workflow Planner) / §13"
+
+workflow_plan:
+  id: { type: string, required: true }
+  workflow_type: { type: enum, values: [WF1, WF2, WF3], required: true }
+  visible_steps:
+    type: list
+    constraint: "exatamente 3"
+    required: true
+    item:
+      number: { type: integer, range: [1, 3] }
+      name: { type: string }
+      internal_actions: { type: list }
+  gates:
+    type: list
+    item:
+      gate_id: { type: string }
+      name: { type: string }
+      pass_when: { type: list }
+      fail_when: { type: list }
+      human_confirmation: { type: boolean, default: false }
+  evidence: { type: list }
+  deliverable: { type: string, required: true }
+
+rules:
+  - "visible_steps deve conter exatamente 3 itens (three-step constraint §29.7)."
+  - "Pipeline interno pode ter mais etapas; superfície mostra 3."

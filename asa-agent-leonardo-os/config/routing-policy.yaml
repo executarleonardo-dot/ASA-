@@ -1,0 +1,49 @@
+schema: LEO-CONFIG-ROUTING-v1.0
+document_type: config
+source: "AGENT_BUILD_SPEC §15.2 / §9"
+
+routing_policy:
+  principle: smallest_sufficient_stack
+  steps:
+    - environment_resolver
+    - context_resolver
+    - intent_classifier
+    - specialist_composer
+    - workflow_planner
+    - execution_router
+    - quality_evaluator
+    - state_trace_registry
+    - handoff
+
+  rules:
+    - when: "criação ou desenvolvimento"
+      route_to: WF1
+    - when: "resultado validado que deve virar conteúdo"
+      route_to: WF2
+    - when: "distribuição, análise, decisão ou reciclagem"
+      route_to: WF3
+    - when: "tarefa simples sem especialização"
+      route_to: direct_answer
+    - when: "padrão repetível"
+      route_to: command_or_skill
+    - when: "contexto isolado / raciocínio especializado"
+      route_to: skill_or_temporary_specialist
+    - when: "ação externa"
+      route_to: connector
+      requires_confirmation: true
+    - when: "alto risco"
+      route_to: human_gate
+      mandatory: true
+
+  execution_router_targets:
+    - leonardo_admin_skill
+    - asa_admin_skill
+    - deskos_skill
+    - connectors
+    - references
+
+  guardrails:
+    - "Selecionar exatamente 1 Skill principal."
+    - "Adicionar Skills auxiliares apenas por dependência real."
+    - "Nunca carregar todo o stack."
+    - "Registrar motivo da seleção e alternativas rejeitadas relevantes."

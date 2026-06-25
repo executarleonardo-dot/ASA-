@@ -1,0 +1,30 @@
+schema: LEO-SCHEMA-ENV-MANIFEST-v1.0
+document_type: schema
+title: "Environment Manifest"
+source: "AGENT_BUILD_SPEC §17.1"
+
+environment_manifest:
+  checked_at: { type: string, format: datetime, required: true }
+  runtime: { type: string, required: true }
+  account_plan: { type: string }
+  model:
+    available: { type: list }
+    selected: { type: string }
+  projects:
+    available: { type: boolean_or_null }
+  memory:
+    available: { type: boolean_or_null }
+    write_requires_confirmation: { type: boolean, default: true }
+  skills:
+    installed: { type: list }
+  connectors:
+    active: { type: list }
+    unavailable: { type: list }
+  artifacts:
+    available: { type: boolean_or_null }
+  permissions:
+    external_write: { type: string, default: confirmation_required }
+    destructive_action: { type: string, default: confirmation_required }
+  gaps: { type: list }
+
+rule: "Nenhum campo pode ser presumido. null = não verificado (= [GAP-RUNTIME])."

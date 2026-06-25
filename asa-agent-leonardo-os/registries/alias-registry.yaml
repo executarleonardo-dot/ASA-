@@ -1,0 +1,21 @@
+schema: LEO-REGISTRY-ALIAS-v1.0
+document_type: registry
+source: "AGENT_BUILD_SPEC §24 OQ-02"
+
+aliases:
+  - canonical: "Leonardo Admin"
+    alias: "Leonardo S"
+    type: skill_identity
+    note: "OQ-02 — nome canônico = Leonardo Admin; 'Leonardo S' preservado como alias."
+  - canonical: "ASA"
+    alias: "Agentic Systems Architect"
+    type: role
+  - canonical: "ASA"
+    alias: "Meta-Agent Orchestrator"
+    type: role_alternative
+    note: "Blueprint cita alternativa; papel oficial = Agentic Systems Architect."
+  - canonical: "DESK-OS"
+    alias: "DeskOS"
+    type: system_name
+
+rule: "Preservar aliases sem fundir identidades; o canonical prevalece em decisões."

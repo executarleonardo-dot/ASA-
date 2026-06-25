@@ -1,0 +1,30 @@
+schema: LEO-EVAL-v1.0
+name: workflow-three-steps
+source: "AGENT_BUILD_SPEC §29.7"
+
+rule: "Todos os workflows apresentados ao usuário devem ter exatamente 3 etapas visíveis."
+
+cases:
+  - workflow: WF1
+    expect_visible_steps: 3
+    steps: [DEFINIR, DESENVOLVER, ENTREGAR]
+  - workflow: WF2
+    expect_visible_steps: 3
+    steps: [EXTRAIR, PRODUZIR, PUBLICAR]
+  - workflow: WF3
+    expect_visible_steps: 3
+    steps: [DISTRIBUIR, ANALISAR, RECICLAR]
+  - routine: A
+    expect_visible_steps: 3
+  - routine: B
+    expect_visible_steps: 3
+  - routine: C
+    expect_visible_steps: 3
+  - routine: D
+    expect_visible_steps: 3
+  - routine: E
+    expect_visible_steps: 3
+
+fail_if:
+  - "mais de 3 etapas visíveis"
+  - "menos de 3 etapas visíveis"

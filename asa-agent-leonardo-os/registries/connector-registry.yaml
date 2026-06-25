@@ -1,0 +1,29 @@
+schema: LEO-REGISTRY-CONNECTOR-v1.0
+document_type: registry
+status: unverified
+related_gaps: [GR-03, OQ-05]
+
+# Conectores são DECLARAÇÕES NÃO VERIFICADAS até o Environment Resolver inspecionar o Claude.ai.
+connectors:
+  - id: master_spreadsheet
+    name: "Planilha Master (LEONARDO_ADMIN_OS_MASTER.xlsx)"
+    read: allowed_via_environment_resolver
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado; campos graváveis indefinidos (OQ-05)"
+  - id: linear
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado"
+  - id: drive
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado"
+  - id: github
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado"
+  - id: gmail
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado"
+  - id: notion
+    write: confirmation_required
+    status: "[GAP-RUNTIME] não verificado"
+
+rule: "Toda escrita externa requer confirmação. Nenhuma credencial é criada no build."

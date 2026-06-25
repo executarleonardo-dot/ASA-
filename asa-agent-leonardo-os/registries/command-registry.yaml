@@ -1,0 +1,26 @@
+schema: LEO-REGISTRY-COMMAND-v1.0
+document_type: registry
+
+commands:
+  - name: architect-agentic-system
+    file: .claude/commands/architect-agentic-system.md
+    routes_to: WF1
+    primary_skill: asa-admin
+    status: primary
+  - name: create-validate-agentic-system
+    file: .claude/commands/create-validate-agentic-system.md
+    routes_to: WF1
+    primary_skill: asa-admin
+    status: alternative
+  - name: wf1-build
+    file: .claude/commands/wf1-build.md
+    routes_to: WF1
+  - name: wf2-communicate
+    file: .claude/commands/wf2-communicate.md
+    routes_to: WF2
+  - name: wf3-operate
+    file: .claude/commands/wf3-operate.md
+    routes_to: WF3
+
+gaps:
+  - "[GAP] OQ-01 — função histórica dos Commands 01–03 não especificada; não inventada."

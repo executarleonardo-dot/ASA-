@@ -1,0 +1,23 @@
+schema: LEO-EVAL-v1.0
+name: specialist-composition
+source: "AGENT_BUILD_SPEC §16"
+
+cases:
+  - input: "Crie uma Skill para diagnosticar uma PME."
+    expect:
+      primary_skill: asa-admin
+      auxiliary_skills_minimal: true
+      has_rationale: true
+      lifetime: task_only
+  - input: "Abra minha semana."
+    expect:
+      primary_skill: leonardo-admin
+      auxiliary_skills: [deskos]
+      has_rationale: true
+
+invariants:
+  - exactly_one_primary_skill
+  - auxiliaries_only_by_real_dependency
+  - rationale_selected_because_present
+  - no_full_stack_loading
+  - specialist_destroyed_after_task

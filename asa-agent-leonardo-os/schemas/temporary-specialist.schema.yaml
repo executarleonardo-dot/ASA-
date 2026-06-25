@@ -1,0 +1,31 @@
+schema: LEO-SCHEMA-TEMP-SPECIALIST-v1.0
+document_type: schema
+title: "Temporary Specialist"
+source: "AGENT_BUILD_SPEC §16.1"
+
+temporary_specialist:
+  id: { type: string, required: true }
+  task_id: { type: string, required: true }
+  role: { type: string, required: true }
+  goal: { type: string, required: true }
+  domain: { type: string }
+  use_case: { type: string }
+  primary_skill: { type: string, required: true }
+  auxiliary_skills: { type: list }
+  references: { type: list }
+  tools: { type: list }
+  connectors: { type: list }
+  method: { type: list }
+  constraints: { type: list }
+  quality_criteria: { type: list }
+  guardrails: { type: list }
+  stop_conditions: { type: list }
+  rationale:
+    selected_because: { type: list, required: true }
+    rejected_alternatives: { type: list }
+  lifetime: { type: string, const: task_only }
+
+rules:
+  - "Exatamente 1 primary_skill."
+  - "auxiliary_skills somente por dependência real."
+  - "Destruir/arquivar após a tarefa; converter em Skill só se reutilizável e aprovado."

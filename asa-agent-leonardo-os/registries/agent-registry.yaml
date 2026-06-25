@@ -1,0 +1,30 @@
+schema: LEO-REGISTRY-AGENT-v1.0
+document_type: registry
+
+runtime_agents:
+  - id: LEO-AGENT-ASA-ORCHESTRATOR-v1
+    name: ASA Orchestrator
+    file: .claude/agents/asa-orchestrator.md
+    blueprint: blueprints/ASA_ORCHESTRATOR_AGENT.md
+    status: required
+    scope: runtime_v1
+
+build_time_agents:
+  - id: asa-build-architect
+    file: .claude/agents/asa-build-architect.md
+    permission_mode: plan_first
+    scope: build_time
+  - id: asa-skill-engineer
+    file: .claude/agents/asa-skill-engineer.md
+    permission_mode: normal
+    scope: build_time
+  - id: asa-agent-engineer
+    file: .claude/agents/asa-agent-engineer.md
+    permission_mode: normal
+    scope: build_time
+  - id: asa-quality-governance-auditor
+    file: .claude/agents/asa-quality-governance-auditor.md
+    permission_mode: read_only
+    scope: build_time
+
+rule: "Exatamente 1 agente runtime (ADR-002). Subagentes não fazem parte do runtime v1."

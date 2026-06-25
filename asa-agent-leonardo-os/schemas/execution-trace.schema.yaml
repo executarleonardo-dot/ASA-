@@ -1,0 +1,43 @@
+schema: LEO-SCHEMA-EXEC-TRACE-v1.0
+document_type: schema
+title: "Execution Trace"
+source: "AGENT_BUILD_SPEC §19.1"
+
+execution_trace:
+  execution_id: { type: string, required: true }
+  timestamp: { type: string, format: datetime, required: true }
+  user_request: { type: string, required: true }
+  environment_snapshot_id: { type: string }
+  context_layers_used: { type: list }
+  intent:
+    domain: { type: string }
+    use_case: { type: string }
+    complexity: { type: string }
+    risk: { type: string }
+    confidence: { type: number_or_null }
+  workflow:
+    id: { type: string }
+    stages: { type: list }
+  specialist:
+    id: { type: string }
+    role: { type: string }
+  resource_selection:
+    primary_skill: { type: string }
+    auxiliary_skills: { type: list }
+    tools: { type: list }
+    connectors: { type: list }
+    selection_rationale: { type: list }
+  decisions: { type: list }
+  approvals: { type: list }
+  gates: { type: list }
+  artifacts: { type: list }
+  evidence: { type: list }
+  gaps: { type: list }
+  errors: { type: list }
+  retries: { type: list }
+  result_classification: { type: string, enum: [transient, project_specific, permanent_preference, reusable_procedure] }
+  deskos_handoff_id: { type: string }
+  next_action: { type: string }
+  final_status: { type: string, enum: [preparing, executing, awaiting, validating, completed, blocked] }
+
+rule: "100% das execuções devem produzir trace (métrica §30)."

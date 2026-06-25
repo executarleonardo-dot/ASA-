@@ -1,0 +1,1084 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling1\cocoaplatform1{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\deftab720
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sakana Fugu \'97 Blueprint executivo\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 1. Resumo executivo\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs24 \cf2 \strokec2 Sakana Fugu
+\f1\b0 \cf2 \strokec2  \'e9 um sistema japon\'eas de 
+\f0\b \cf2 \strokec2 orquestra\'e7\'e3o multiagente apresentado como um \'fanico modelo
+\f1\b0 \cf2 \strokec2 . O usu\'e1rio envia uma solicita\'e7\'e3o para um endpoint; internamente, o Fugu decide se responde diretamente ou se monta uma equipe tempor\'e1ria de modelos especializados, delega subtarefas, verifica resultados e sintetiza a resposta final.  \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 SOLICITA\'c7\'c3O\
+    \uc0\u9474 \
+    \uc0\u9660 \
+FUGU \'97 MODELO ORQUESTRADOR\
+    \uc0\u9474 \
+    \uc0\u9500 \u9472 \u9472  entende o problema\
+    \uc0\u9500 \u9472 \u9472  estima complexidade\
+    \uc0\u9500 \u9472 \u9472  seleciona agentes/modelos\
+    \uc0\u9500 \u9472 \u9472  distribui subtarefas\
+    \uc0\u9500 \u9472 \u9472  coordena depend\'eancias\
+    \uc0\u9500 \u9472 \u9472  verifica resultados\
+    \uc0\u9492 \u9472 \u9472  sintetiza a resposta\
+            \uc0\u9474 \
+            \uc0\u9660 \
+      RESULTADO \'daNICO\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 A inova\'e7\'e3o central n\'e3o \'e9 simplesmente \'93usar v\'e1rios agentes\'94. \'c9 transformar a pr\'f3pria 
+\f0\b \cf2 \strokec2 orquestra\'e7\'e3o em uma capacidade aprendida pelo modelo
+\f1\b0 \cf2 \strokec2 , em vez de depender exclusivamente de workflows fixos programados por humanos.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 2. First principles \'97 princ\'edpios fundamentais\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 Princ\'edpio 1 \'97 Nenhum modelo \'e9 o melhor em tudo\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Modelos diferentes apresentam for\'e7as distintas em:\
+\pard\pardeftab720\partightenfactor0
+\ls1\ilvl0\cf2 \strokec2 {\listtext	\'95	}programa\'e7\'e3o;\
+{\listtext	\'95	}matem\'e1tica;\
+{\listtext	\'95	}pesquisa;\
+{\listtext	\'95	}contexto longo;\
+{\listtext	\'95	}planejamento;\
+{\listtext	\'95	}cr\'edtica;\
+{\listtext	\'95	}s\'edntese;\
+{\listtext	\'95	}uso de ferramentas.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf2 \strokec2 Dedu\'e7\'e3o\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 problemas diferentes\
+        +\
+modelos com capacidades diferentes\
+        \uc0\u9474 \
+        \uc0\u9660 \
+n\'e3o existe um \'fanico modelo \'f3timo para todas as tarefas\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Portanto, o problema deixa de ser apenas:\
+\'93Qual \'e9 o melhor modelo?\'94\
+E passa a ser:\
+\'93Qual combina\'e7\'e3o de modelos resolve melhor esta tarefa espec\'edfica?\'94\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Princ\'edpio 2 \'97 Problemas complexos s\'e3o sistemas de subtarefas\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Uma tarefa real raramente \'e9 at\'f4mica.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 PROBLEMA COMPLEXO\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  interpreta\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  planejamento\
+\uc0\u9500 \u9472 \u9472  busca de evid\'eancias\
+\uc0\u9500 \u9472 \u9472  execu\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  cr\'edtica\
+\uc0\u9500 \u9472 \u9472  corre\'e7\'e3o\
+\uc0\u9492 \u9472 \u9472  s\'edntese\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Cada parte pode exigir capacidades diferentes. Logo, um sistema pode obter desempenho superior decompondo o problema e atribuindo cada parte ao agente mais adequado.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Princ\'edpio 3 \'97 A coordena\'e7\'e3o tamb\'e9m \'e9 intelig\'eancia\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 N\'e3o basta possuir bons agentes.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 agentes fortes\
+    +\
+coordena\'e7\'e3o ruim\
+    =\
+resultado inconsistente\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 A qualidade do sistema depende de decis\'f5es como:\
+\pard\pardeftab720\partightenfactor0
+\ls2\ilvl0\cf2 \strokec2 {\listtext	\'95	}quando delegar;\
+{\listtext	\'95	}para quem delegar;\
+{\listtext	\'95	}quantos agentes utilizar;\
+{\listtext	\'95	}quais resultados comparar;\
+{\listtext	\'95	}quando executar novamente;\
+{\listtext	\'95	}quando encerrar;\
+{\listtext	\'95	}como sintetizar respostas conflitantes.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Assim, a orquestra\'e7\'e3o n\'e3o \'e9 apenas infraestrutura. Ela \'e9 parte central do racioc\'ednio.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Princ\'edpio 4 \'97 Workflows fixos n\'e3o cobrem problemas imprevis\'edveis\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Um workflow manual funciona quando o problema \'e9 conhecido:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 sempre executar A \uc0\u8594  B \u8594  C\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Mas problemas abertos variam em:\
+\pard\pardeftab720\partightenfactor0
+\ls3\ilvl0\cf2 \strokec2 {\listtext	\'95	}dificuldade;\
+{\listtext	\'95	}dom\'ednio;\
+{\listtext	\'95	}risco;\
+{\listtext	\'95	}quantidade de etapas;\
+{\listtext	\'95	}evid\'eancias dispon\'edveis;\
+{\listtext	\'95	}necessidade de valida\'e7\'e3o.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 A racionalidade do Fugu \'e9 substituir uma sequ\'eancia completamente fixa por uma pol\'edtica adaptativa:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 problema recebido\
+       \uc0\u9474 \
+       \uc0\u9660 \
+avaliar necessidade real\
+       \uc0\u9474 \
+       \uc0\u9500 \u9472 \u9472  simples \u8594  responder diretamente\
+       \uc0\u9474 \
+       \uc0\u9492 \u9472 \u9472  complexo \u8594  montar workflow sob demanda\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Princ\'edpio 5 \'97 O usu\'e1rio n\'e3o deveria administrar toda a complexidade\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Uma arquitetura multiagente tradicional pode exigir:\
+\pard\pardeftab720\partightenfactor0
+\ls4\ilvl0\cf2 \strokec2 {\listtext	\'95	}v\'e1rias APIs;\
+{\listtext	\'95	}v\'e1rias chaves;\
+{\listtext	\'95	}roteamento;\
+{\listtext	\'95	}prompts especializados;\
+{\listtext	\'95	}tratamento de falhas;\
+{\listtext	\'95	}consolida\'e7\'e3o;\
+{\listtext	\'95	}observabilidade;\
+{\listtext	\'95	}controle de custos.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 O Fugu abstrai essa complexidade por meio de uma API compat\'edvel com o padr\'e3o da OpenAI. Para o desenvolvedor, o sistema se comporta como um modelo \'fanico, embora possa coordenar v\'e1rios agentes internamente.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 3. Rationale \'97 por que essa arquitetura existe\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 Problema estrutural\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 MODELO MONOL\'cdTICO\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  concentra todas as capacidades\
+\uc0\u9500 \u9472 \u9472  depende de um \'fanico fornecedor\
+\uc0\u9500 \u9472 \u9472  possui falhas espec\'edficas\
+\uc0\u9500 \u9472 \u9472  pode ser excessivo para tarefas simples\
+\uc0\u9492 \u9472 \u9472  n\'e3o explora especializa\'e7\'e3o externa\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Hip\'f3tese arquitetural\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 INTELIG\'caNCIA COLETIVA\
+=\
+especializa\'e7\'e3o\
++\
+sele\'e7\'e3o adequada\
++\
+delega\'e7\'e3o\
++\
+verifica\'e7\'e3o\
++\
+s\'edntese\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Racional principal\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 O desempenho global pode melhorar n\'e3o apenas tornando um modelo maior, mas ensinando um modelo coordenador a combinar inteligentemente v\'e1rios modelos existentes.\
+A Sakana descreve o Fugu como um modelo de linguagem relativamente pequeno treinado para chamar outros LLMs, inclusive podendo chamar inst\'e2ncias de si pr\'f3prio de forma recursiva.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 4. 5W2H\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 WHAT \'97 O que \'e9?\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Um 
+\f0\b \cf2 \strokec2 modelo-orquestrador multiagente
+\f1\b0 \cf2 \strokec2  que apresenta v\'e1rios modelos especializados como uma \'fanica interface.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 FUGU\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  parece um \'fanico modelo\
+\uc0\u9500 \u9472 \u9472  cont\'e9m uma pol\'edtica de orquestra\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  acessa um pool de agentes\
+\uc0\u9500 \u9472 \u9472  cria equipes tempor\'e1rias\
+\uc0\u9500 \u9472 \u9472  delega e verifica trabalho\
+\uc0\u9492 \u9472 \u9472  entrega uma resposta consolidada\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Existem duas variantes comerciais:\
+\pard\pardeftab720\partightenfactor0
+\ls5\ilvl0
+\f0\b \cf2 \strokec2 {\listtext	\'95	}Fugu:
+\f1\b0 \cf2 \strokec2  equil\'edbrio entre desempenho e lat\'eancia;\
+\ls5\ilvl0
+\f0\b \cf2 \strokec2 {\listtext	\'95	}Fugu Ultra:
+\f1\b0 \cf2 \strokec2  prioriza qualidade e profundidade, empregando uma coordena\'e7\'e3o mais extensa em problemas dif\'edceis.  \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 WHY \'97 Por que foi criado?\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Para resolver cinco problemas:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 01. MODELO \'daNICO\
+    \uc0\u9492 \u9472 \u9472  n\'e3o \'e9 superior em todas as tarefas\
+\
+02. COMPLEXIDADE\
+    \uc0\u9492 \u9472 \u9472  tarefas dif\'edceis exigem capacidades diferentes\
+\
+03. ROTEAMENTO MANUAL\
+    \uc0\u9492 \u9472 \u9472  o usu\'e1rio n\'e3o sabe sempre qual modelo escolher\
+\
+04. WORKFLOWS FIXOS\
+    \uc0\u9492 \u9472 \u9472  n\'e3o se adaptam bem a problemas in\'e9ditos\
+\
+05. DEPEND\'caNCIA\
+    \uc0\u9492 \u9472 \u9472  depender de um \'fanico fornecedor cria risco operacional\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 A Sakana tamb\'e9m posiciona a arquitetura como uma forma de reduzir depend\'eancia de um \'fanico fornecedor, permitindo que os agentes subjacentes sejam substitu\'eddos ou reorganizados.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 WHO \'97 Quem participa?\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 USU\'c1RIO OU SISTEMA CLIENTE\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  envia objetivo\
+        \uc0\u9474 \
+        \uc0\u9660 \
+FUGU / CONDUCTOR\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  interpreta\
+\uc0\u9500 \u9472 \u9472  planeja\
+\uc0\u9500 \u9472 \u9472  seleciona agentes\
+\uc0\u9492 \u9472 \u9472  controla a execu\'e7\'e3o\
+        \uc0\u9474 \
+        \uc0\u9660 \
+POOL DE AGENTES\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  modelo de programa\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  modelo de racioc\'ednio\
+\uc0\u9500 \u9472 \u9472  modelo de pesquisa\
+\uc0\u9500 \u9472 \u9472  modelo de cr\'edtica\
+\uc0\u9500 \u9472 \u9472  modelo de s\'edntese\
+\uc0\u9492 \u9472 \u9472  inst\'e2ncia recursiva do pr\'f3prio orquestrador\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 O usu\'e1rio pode restringir determinados modelos ou provedores no Fugu padr\'e3o para atender requisitos de privacidade, dados e conformidade. No Fugu Ultra, segundo a empresa, o pool \'e9 fixo para preservar seu n\'edvel de desempenho.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 WHEN \'97 Quando utilizar?\cf2 \strokec2 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\fs28 \cf2 \strokec2 Adequado\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 usar Fugu quando houver\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  problema complexo\
+\uc0\u9500 \u9472 \u9472  m\'faltiplas etapas\
+\uc0\u9500 \u9472 \u9472  necessidade de verifica\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  programa\'e7\'e3o dif\'edcil\
+\uc0\u9500 \u9472 \u9472  pesquisa cient\'edfica\
+\uc0\u9500 \u9472 \u9472  reprodu\'e7\'e3o de artigos\
+\uc0\u9500 \u9472 \u9472  an\'e1lise documental\
+\uc0\u9500 \u9472 \u9472  investiga\'e7\'e3o de patentes\
+\uc0\u9492 \u9472 \u9472  necessidade de comparar abordagens\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf2 \strokec2 Menos necess\'e1rio\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 n\'e3o precisa de m\'faltiplos agentes quando\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  pergunta \'e9 simples\
+\uc0\u9500 \u9472 \u9472  resposta \'e9 determin\'edstica\
+\uc0\u9500 \u9472 \u9472  custo precisa ser m\'ednimo\
+\uc0\u9500 \u9472 \u9472  lat\'eancia \'e9 cr\'edtica\
+\uc0\u9492 \u9472 \u9472  um modelo especializado j\'e1 basta\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 A pr\'f3pria arquitetura pode escolher responder diretamente quando a tarefa n\'e3o justificar uma equipe de agentes.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 WHERE \'97 Onde opera?\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 A utiliza\'e7\'e3o ocorre por uma 
+\f0\b \cf2 \strokec2 API compat\'edvel com OpenAI
+\f1\b0 \cf2 \strokec2 , permitindo substituir o endpoint do modelo sem necessariamente reconstruir toda a integra\'e7\'e3o.  \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 APLICA\'c7\'c3O\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  chatbot\
+\uc0\u9500 \u9472 \u9472  IDE\
+\uc0\u9500 \u9472 \u9472  agente de c\'f3digo\
+\uc0\u9500 \u9472 \u9472  sistema empresarial\
+\uc0\u9500 \u9472 \u9472  pesquisa\
+\uc0\u9492 \u9472 \u9472  automa\'e7\'e3o\
+       \uc0\u9474 \
+       \uc0\u9660 \
+API FUGU\
+       \uc0\u9474 \
+       \uc0\u9660 \
+ORQUESTRA\'c7\'c3O INTERNA\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 HOW \'97 Como funciona?\cf2 \strokec2 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\fs28 \cf2 \strokec2 Fluxo operacional\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 1. RECEBER\
+   \uc0\u9492 \u9472 \u9472  objetivo, contexto e restri\'e7\'f5es\
+\
+2. CLASSIFICAR\
+   \uc0\u9500 \u9472 \u9472  dom\'ednio\
+   \uc0\u9500 \u9472 \u9472  dificuldade\
+   \uc0\u9500 \u9472 \u9472  risco\
+   \uc0\u9492 \u9472 \u9472  quantidade prov\'e1vel de etapas\
+\
+3. DECIDIR\
+   \uc0\u9500 \u9472 \u9472  resposta direta\
+   \uc0\u9492 \u9472 \u9472  execu\'e7\'e3o multiagente\
+\
+4. MONTAR EQUIPE\
+   \uc0\u9500 \u9472 \u9472  selecionar modelos\
+   \uc0\u9500 \u9472 \u9472  definir fun\'e7\'f5es\
+   \uc0\u9500 \u9472 \u9472  gerar instru\'e7\'f5es\
+   \uc0\u9492 \u9472 \u9472  estabelecer depend\'eancias\
+\
+5. EXECUTAR\
+   \uc0\u9500 \u9472 \u9472  tarefas paralelas\
+   \uc0\u9500 \u9472 \u9472  tarefas sequenciais\
+   \uc0\u9492 \u9472 \u9472  chamadas recursivas\
+\
+6. AVALIAR\
+   \uc0\u9500 \u9472 \u9472  comparar respostas\
+   \uc0\u9500 \u9472 \u9472  procurar inconsist\'eancias\
+   \uc0\u9500 \u9472 \u9472  verificar evid\'eancias\
+   \uc0\u9492 \u9472 \u9472  identificar lacunas\
+\
+7. CORRIGIR\
+   \uc0\u9500 \u9472 \u9472  nova delega\'e7\'e3o\
+   \uc0\u9500 \u9472 \u9472  agente cr\'edtico\
+   \uc0\u9492 \u9472 \u9472  repeti\'e7\'e3o parcial\
+\
+8. SINTETIZAR\
+   \uc0\u9492 \u9472 \u9472  transformar resultados em uma resposta \'fanica\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 HOW MUCH \'97 Quanto custa em recursos?\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 O custo n\'e3o depende somente da resposta final, mas da quantidade e da profundidade da coordena\'e7\'e3o.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 CUSTO TOTAL\
+\uc0\u8776 \
+tokens do orquestrador\
++\
+tokens dos agentes\
++\
+n\'famero de itera\'e7\'f5es\
++\
+profundidade da verifica\'e7\'e3o\
++\
+tempo de execu\'e7\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 A Sakana afirma utilizar uma tarifa \'fanica baseada no modelo de maior n\'edvel presente no pool, em vez de somar integralmente tarifas separadas para cada agente ativado. Essa \'e9 uma regra comercial da plataforma, n\'e3o uma caracter\'edstica necess\'e1ria de toda arquitetura multiagente.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 5. Arquitetura l\'f3gica\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  1. INTERFACE                          \u9474 \
+\uc0\u9474  usu\'e1rio, aplicativo ou agente externo \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+                   \uc0\u9474 \
+                   \uc0\u9660 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  2. API \'daNICA                          \u9474 \
+\uc0\u9474  autentica\'e7\'e3o, entrada e sa\'edda          \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+                   \uc0\u9474 \
+                   \uc0\u9660 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  3. ORQUESTRADOR                       \u9474 \
+\uc0\u9474                                        \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  interpreta\'e7\'e3o                     \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  decomposi\'e7\'e3o                      \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  roteamento                        \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  delega\'e7\'e3o                         \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  controle                          \u9474 \
+\uc0\u9474  \u9492 \u9472 \u9472  s\'edntese                           \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+                   \uc0\u9474 \
+                   \uc0\u9660 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  4. POOL DE AGENTES                    \u9474 \
+\uc0\u9474                                        \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  agente A: planejamento            \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  agente B: programa\'e7\'e3o             \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  agente C: matem\'e1tica              \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  agente D: cr\'edtica                 \u9474 \
+\uc0\u9474  \u9500 \u9472 \u9472  agente E: pesquisa                \u9474 \
+\uc0\u9474  \u9492 \u9472 \u9472  agente F: s\'edntese                 \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+                   \uc0\u9474 \
+                   \uc0\u9660 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  5. LOOP DE AVALIA\'c7\'c3O                  \u9474 \
+\uc0\u9474  comparar \u8594  validar \u8594  corrigir          \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+                   \uc0\u9474 \
+                   \uc0\u9660 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+\uc0\u9474  6. RESPOSTA CONSOLIDADA               \u9474 \
+\uc0\u9474  uma sa\'edda, ocultando a complexidade    \u9474 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 6. Arquitetura funcional\cf2 \strokec2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf2 \strokec2 Camada 1 \'97 Intake\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Respons\'e1vel por transformar a solicita\'e7\'e3o em um contrato de execu\'e7\'e3o.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 request:\
+  objective: resultado desejado\
+  context: informa\'e7\'f5es dispon\'edveis\
+  constraints: limites e proibi\'e7\'f5es\
+  quality_target: n\'edvel de qualidade\
+  latency_target: tempo aceit\'e1vel\
+  risk_level: baixo | m\'e9dio | alto\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 2 \'97 Problem classifier\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Classifica:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 DOM\'cdNIO\
+\uc0\u9500 \u9472 \u9472  c\'f3digo\
+\uc0\u9500 \u9472 \u9472  ci\'eancia\
+\uc0\u9500 \u9472 \u9472  matem\'e1tica\
+\uc0\u9500 \u9472 \u9472  pesquisa\
+\uc0\u9492 \u9472 \u9472  geral\
+\
+COMPLEXIDADE\
+\uc0\u9500 \u9472 \u9472  simples\
+\uc0\u9500 \u9472 \u9472  composta\
+\uc0\u9492 \u9472 \u9472  aberta\
+\
+RISCO\
+\uc0\u9500 \u9472 \u9472  baixo\
+\uc0\u9500 \u9472 \u9472  m\'e9dio\
+\uc0\u9492 \u9472 \u9472  alto\
+\
+ESTRAT\'c9GIA\
+\uc0\u9500 \u9472 \u9472  resposta direta\
+\uc0\u9500 \u9472 \u9472  especialista \'fanico\
+\uc0\u9500 \u9472 \u9472  m\'faltiplos especialistas\
+\uc0\u9492 \u9472 \u9472  execu\'e7\'e3o recursiva\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 3 \'97 Planner\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Converte o objetivo em grafo de depend\'eancias.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 OBJETIVO\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  T1 \'97 compreender requisitos\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  T2 \'97 gerar alternativas\
+\uc0\u9474        \u9500 \u9472 \u9472  T2A\
+\uc0\u9474        \u9492 \u9472 \u9472  T2B\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  T3 \'97 avaliar alternativas\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  T4 \'97 produzir resposta final\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Isso \'e9 superior a uma lista linear quando partes do problema podem ocorrer em paralelo.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 4 \'97 Router\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Escolhe agentes com base em:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 score do agente\
+=\
+adequa\'e7\'e3o ao dom\'ednio\
+\'d7\
+qualidade esperada\
+\'d7\
+confiabilidade\
+\'d7\
+compatibilidade\
+\'f7\
+custo e lat\'eancia\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Essa f\'f3rmula representa a l\'f3gica conceitual; a Sakana n\'e3o publica integralmente sua pol\'edtica propriet\'e1ria de sele\'e7\'e3o e coordena\'e7\'e3o. A empresa declara que o modelo e o padr\'e3o de roteamento espec\'edfico n\'e3o s\'e3o expostos ao usu\'e1rio.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 5 \'97 Executor\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Executa as tarefas:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 PARALELO\
+\uc0\u9500 \u9472 \u9472  agente A cria solu\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  agente B cria alternativa\
+\uc0\u9492 \u9472 \u9472  agente C busca falhas\
+\
+SEQUENCIAL\
+agente A planeja\
+    \uc0\u9474 \
+    \uc0\u9660 \
+agente B executa\
+    \uc0\u9474 \
+    \uc0\u9660 \
+agente C verifica\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 6 \'97 Evaluator\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Aplica crit\'e9rios como:\
+\pard\pardeftab720\partightenfactor0
+\ls6\ilvl0\cf2 \strokec2 {\listtext	\'95	}corre\'e7\'e3o;\
+{\listtext	\'95	}completude;\
+{\listtext	\'95	}consist\'eancia;\
+{\listtext	\'95	}ader\'eancia ao objetivo;\
+{\listtext	\'95	}evid\'eancia;\
+{\listtext	\'95	}seguran\'e7a;\
+{\listtext	\'95	}custo;\
+{\listtext	\'95	}confiabilidade.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 resultado suficiente?\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  sim \u8594  sintetizar\
+\uc0\u9492 \u9472 \u9472  n\'e3o\
+    \uc0\u9500 \u9472 \u9472  corrigir prompt\
+    \uc0\u9500 \u9472 \u9472  chamar outro agente\
+    \uc0\u9500 \u9472 \u9472  repetir subtarefa\
+    \uc0\u9492 \u9472 \u9472  ampliar investiga\'e7\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 7 \'97 Recursive orchestration\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 Uma caracter\'edstica descrita na pesquisa da Sakana \'e9 permitir que o orquestrador selecione uma inst\'e2ncia de si pr\'f3prio como trabalhador.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 FUGU PRINCIPAL\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  chama FUGU SECUND\'c1RIO\
+        \uc0\u9474 \
+        \uc0\u9500 \u9472 \u9472  recebe subtarefa\
+        \uc0\u9500 \u9472 \u9472  monta sua pr\'f3pria equipe\
+        \uc0\u9492 \u9472 \u9472  retorna resultado\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Isso cria uma \'e1rvore din\'e2mica de execu\'e7\'e3o e permite ampliar computa\'e7\'e3o durante a infer\'eancia.  \
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Camada 8 \'97 Synthesizer\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 N\'e3o deve apenas concatenar respostas.\
+Deve:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 S\'cdNTESE\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  remover duplica\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  resolver contradi\'e7\'f5es\
+\uc0\u9500 \u9472 \u9472  preservar evid\'eancias\
+\uc0\u9500 \u9472 \u9472  priorizar respostas verificadas\
+\uc0\u9500 \u9472 \u9472  explicitar incertezas\
+\uc0\u9492 \u9472 \u9472  produzir uma narrativa coerente\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 7. Loop de controle\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 PERCEBER\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  entender problema e estado atual\
+      \uc0\u9474 \
+      \uc0\u9660 \
+PLANEJAR\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  definir tarefas e depend\'eancias\
+      \uc0\u9474 \
+      \uc0\u9660 \
+DELEGAR\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  selecionar agente adequado\
+      \uc0\u9474 \
+      \uc0\u9660 \
+EXECUTAR\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  gerar resultado parcial\
+      \uc0\u9474 \
+      \uc0\u9660 \
+AVALIAR\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  est\'e1 correto?\
+\uc0\u9500 \u9472 \u9472  est\'e1 completo?\
+\uc0\u9492 \u9472 \u9472  atende ao objetivo?\
+      \uc0\u9474 \
+      \uc0\u9500 \u9472 \u9472  N\'c3O \u8594  replanejar\
+      \uc0\u9474           \u9474 \
+      \uc0\u9474           \u9492 \u9472 \u9472  novo ciclo\
+      \uc0\u9474 \
+      \uc0\u9492 \u9472 \u9472  SIM \u8594  sintetizar\
+                    \uc0\u9474 \
+                    \uc0\u9660 \
+                  ENTREGAR\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 8. L\'f3gica decis\'f3ria simplificada\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 ENTRADA\
+\uc0\u9474 \
+\uc0\u9660 \
+A tarefa \'e9 simples e de baixo risco?\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  SIM\
+\uc0\u9474    \u9492 \u9472 \u9472  responder diretamente\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  N\'c3O\
+    \uc0\u9474 \
+    \uc0\u9660 \
+    Existe um agente claramente superior?\
+    \uc0\u9474 \
+    \uc0\u9500 \u9472 \u9472  SIM\
+    \uc0\u9474    \u9492 \u9472 \u9472  delegar a especialista \'fanico\
+    \uc0\u9474 \
+    \uc0\u9492 \u9472 \u9472  N\'c3O\
+        \uc0\u9474 \
+        \uc0\u9660 \
+        A tarefa pode ser decomposta?\
+        \uc0\u9474 \
+        \uc0\u9500 \u9472 \u9472  SIM\
+        \uc0\u9474    \u9500 \u9472 \u9472  criar subtarefas\
+        \uc0\u9474    \u9500 \u9472 \u9472  selecionar agentes\
+        \uc0\u9474    \u9500 \u9472 \u9472  executar\
+        \uc0\u9474    \u9492 \u9472 \u9472  integrar\
+        \uc0\u9474 \
+        \uc0\u9492 \u9472 \u9472  N\'c3O\
+            \uc0\u9500 \u9472 \u9472  gerar m\'faltiplas hip\'f3teses\
+            \uc0\u9500 \u9472 \u9472  comparar abordagens\
+            \uc0\u9492 \u9472 \u9472  escolher melhor resultado\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 9. Diferen\'e7a entre Fugu e uma arquitetura multiagente tradicional\cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrt\brdrs\brdrw20\brdrcf2 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\qc\partightenfactor0
+
+\fs24 \cf2 \strokec2 Dimens\'e3o\cf2 \strokec2 \cell 
+\pard\intbl\itap1\pardeftab720\sa240\qc\partightenfactor0
+\cf2 \strokec2 Multiagente tradicional\cf2 \strokec2 \cell 
+\pard\intbl\itap1\pardeftab720\sa240\qc\partightenfactor0
+\cf2 \strokec2 Sakana Fugu\cf2 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf2 \strokec2 Workflow\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Definido por desenvolvedor\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Aprendido e adaptativo\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Pap\'e9is\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Predeterminados\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Montados por tarefa\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Roteamento\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Regras manuais\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Pol\'edtica interna aprendida\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Interface\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 V\'e1rios agentes e APIs\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Um \'fanico endpoint\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Sele\'e7\'e3o de modelos\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Feita pelo usu\'e1rio\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Feita pelo orquestrador\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Decomposi\'e7\'e3o\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Codificada previamente\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Gerada dinamicamente\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Recurs\'e3o\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Precisa ser implementada\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Pode fazer parte da coordena\'e7\'e3o\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Transpar\'eancia\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Potencialmente alta\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Roteamento propriet\'e1rio\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Controle\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Mais expl\'edcito\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Mais abstrato\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth15680\trftsWidth3 \trbrdrl\brdrs\brdrw20\brdrcf2 \trbrdrb\brdrs\brdrw20\brdrcf2 \trbrdrr\brdrs\brdrw20\brdrcf2 
+\clvertalc \clshdrawnil \clwWidth3588\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4924\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5647\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt160 \clpadl240 \clpadb160 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Opera\'e7\'e3o\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Mais complexa\cell 
+\pard\intbl\itap1\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 Simplificada para o cliente\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \strokec2 \uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 10. Aplica\'e7\'e3o ao Leonardo OS\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 A equival\'eancia conceitual seria:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 LEONARDO OS\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  recebe inten\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  classifica ICP\
+\uc0\u9500 \u9472 \u9472  identifica problema\
+\uc0\u9500 \u9472 \u9472  seleciona skill\
+\uc0\u9500 \u9472 \u9472  escolhe agentes\
+\uc0\u9500 \u9472 \u9472  gera workflow\
+\uc0\u9500 \u9472 \u9472  executa verifica\'e7\'f5es\
+\uc0\u9492 \u9472 \u9472  consolida entreg\'e1vel\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Arquitetura inspirada no Fugu\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 USU\'c1RIO\
+\uc0\u9474 \
+\uc0\u9660 \
+LEONARDO ORCHESTRATOR\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  inten\'e7\'e3o\
+\uc0\u9500 \u9472 \u9472  ICP\
+\uc0\u9500 \u9472 \u9472  complexidade\
+\uc0\u9500 \u9472 \u9472  risco\
+\uc0\u9500 \u9472 \u9472  formato desejado\
+\uc0\u9492 \u9472 \u9472  Definition of Done\
+      \uc0\u9474 \
+      \uc0\u9660 \
+ROUTER DE CAPACIDADES\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  Setup-OS\
+\uc0\u9500 \u9472 \u9472  OS Partner\
+\uc0\u9500 \u9472 \u9472  Cognitive Trigger\
+\uc0\u9500 \u9472 \u9472  Agentic Problem Solving\
+\uc0\u9500 \u9472 \u9472  Editorial\
+\uc0\u9500 \u9472 \u9472  Desk-OS\
+\uc0\u9492 \u9472 \u9472  especialistas externos\
+      \uc0\u9474 \
+      \uc0\u9660 \
+WORKFLOW DIN\'c2MICO\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  Planejador\
+\uc0\u9500 \u9472 \u9472  Executor\
+\uc0\u9500 \u9472 \u9472  Cr\'edtico\
+\uc0\u9492 \u9472 \u9472  Sintetizador\
+      \uc0\u9474 \
+      \uc0\u9660 \
+GATE DE QUALIDADE\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  personalizado?\
+\uc0\u9500 \u9472 \u9472  verific\'e1vel?\
+\uc0\u9500 \u9472 \u9472  execut\'e1vel?\
+\uc0\u9500 \u9472 \u9472  completo?\
+\uc0\u9492 \u9472 \u9472  pr\'f3ximo passo expl\'edcito?\
+      \uc0\u9474 \
+      \uc0\u9660 \
+ENTREG\'c1VEL FINAL\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 Diferen\'e7a importante\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 O Leonardo OS pode preservar maior transpar\'eancia:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 FUGU\
+\uc0\u9492 \u9472 \u9472  oculta sele\'e7\'e3o e coordena\'e7\'e3o propriet\'e1rias\
+\
+LEONARDO OS\
+\uc0\u9492 \u9472 \u9472  pode registrar\
+    \uc0\u9500 \u9472 \u9472  skill escolhida\
+    \uc0\u9500 \u9472 \u9472  motivo da escolha\
+    \uc0\u9500 \u9472 \u9472  agentes utilizados\
+    \uc0\u9500 \u9472 \u9472  depend\'eancias\
+    \uc0\u9500 \u9472 \u9472  decis\'f5es\
+    \uc0\u9492 \u9472 \u9472  evid\'eancias\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \strokec2 Isso seria especialmente \'fatil para governan\'e7a, auditoria e controle do seu stack.\
+\uc0\u8232 \
+\uc0\u11835 \
+\uc0\u8232 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \strokec2 11. Regra arquitetural resultante\cf2 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf2 \strokec2 N\'e3o use v\'e1rios agentes porque eles existem. Use o menor conjunto de capacidades capaz de atingir o Definition of Done com qualidade, custo, lat\'eancia e risco aceit\'e1veis.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \strokec2 TAREFA SIMPLES\
+\uc0\u9492 \u9472 \u9472  1 modelo\
+\
+TAREFA ESPECIALIZADA\
+\uc0\u9492 \u9472 \u9472  1 especialista\
+\
+TAREFA COMPOSTA\
+\uc0\u9492 \u9472 \u9472  planner + especialistas + s\'edntese\
+\
+TAREFA CR\'cdTICA\
+\uc0\u9492 \u9472 \u9472  planner + execu\'e7\'e3o + cr\'edtica + verifica\'e7\'e3o + s\'edntese\
+\
+TAREFA ABERTA E DIF\'cdCIL\
+\uc0\u9492 \u9472 \u9472  orquestra\'e7\'e3o adaptativa e potencialmente recursiva\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf2 \strokec2 S\'edntese final da racionalidade\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs24 \cf2 \strokec2 n\'e3o aumentar intelig\'eancia apenas pelo tamanho\
+                     \uc0\u9474 \
+                     \uc0\u9660 \
+usar diversidade de capacidades\
+                     \uc0\u9474 \
+                     \uc0\u9660 \
+selecionar a capacidade certa por problema\
+                     \uc0\u9474 \
+                     \uc0\u9660 \
+coordenar execu\'e7\'e3o e verifica\'e7\'e3o\
+                     \uc0\u9474 \
+                     \uc0\u9660 \
+transformar intelig\'eancia coletiva\
+em uma interface simples\
+}

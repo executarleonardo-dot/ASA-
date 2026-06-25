@@ -1,0 +1,26 @@
+schema: LEO-CONFIG-SOURCE-PRECEDENCE-v1.0
+document_type: config
+source: "CMD §Precedência / AGENT_BUILD_SPEC §0"
+
+precedence_order:
+  - level: 1
+    id: security_and_governance
+  - level: 2
+    id: explicit_leonardo_decisions
+  - level: 3
+    id: cmd_master_standalone
+  - level: 4
+    id: agent_build_spec
+  - level: 5
+    id: prd_leo_prd_asa_v1
+  - level: 6
+    id: leonardo_admin_os_system_prompt
+  - level: 7
+    id: asa_blueprint
+  - level: 8
+    id: implementation_inference
+
+rules:
+  - "Nunca substituir uma decisão explícita por inferência."
+  - "Em conflito, o nível de menor número prevalece."
+  - "Conflito sem precedência clara → pausar e pedir decisão (ver failure handling)."

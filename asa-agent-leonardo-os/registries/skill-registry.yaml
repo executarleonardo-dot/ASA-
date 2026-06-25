@@ -1,0 +1,28 @@
+schema: LEO-REGISTRY-SKILL-v1.0
+document_type: registry
+
+runtime_skills:
+  - id: LEO-SKILL-LEONARDO-ADMIN-v1
+    name: Leonardo Admin
+    file: .claude/skills/leonardo-admin/SKILL.md
+    blueprint: blueprints/LEONARDO_ADMIN_SKILL.md
+    boundary: "contexto operacional de Leonardo"
+    status: required
+  - id: LEO-SKILL-ASA-ADMIN-v1
+    name: ASA Admin
+    file: .claude/skills/asa-admin/SKILL.md
+    blueprint: blueprints/ASA_ADMIN_SKILL.md
+    boundary: "engenharia do sistema agêntico"
+    status: required
+  - id: LEO-SKILL-DESKOS-v1
+    name: DeskOS
+    file: .claude/skills/deskos/SKILL.md
+    blueprint: blueprints/DESKOS_SKILL.md
+    boundary: "adaptador estado -> DESK-OS"
+    status: required
+
+possible_duplications:
+  - note: "[GAP] OQ-04 — dois plugins 'Design' mencionados nas fontes."
+    action: "nenhuma Skill Design criada na v1; revisar com Leonardo antes de adicionar."
+
+rule: "3 Skills runtime com boundaries não sobrepostos (ADR-001). Não criar mega-Skill."

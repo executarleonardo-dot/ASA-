@@ -1,0 +1,23 @@
+schema: LEO-EVAL-v1.0
+name: anti-genericity
+source: "AGENT_BUILD_SPEC §22.1, §29.5"
+
+checklist:
+  - uses_leonardo_context
+  - considers_projects_stack_constraints
+  - would_change_materially_for_other_user
+  - states_limits_and_gaps
+  - has_specific_next_action
+
+comparison_cases:
+  - prompt: "Abra minha semana."
+    personas: [leonardo, professor, advogado, pme_generica]
+    expect: "output de Leonardo muda materialmente (25h/sem, 3 frentes, foco matinal, projetos reais)."
+  - prompt: "Crie um plano operacional do dia."
+    personas: [leonardo, pme_generica]
+    expect: "diferença material; não genérico."
+
+fail_if:
+  - "output idêntico entre personas"
+  - "sem próxima ação específica"
+  - "não cita restrições de capacidade de Leonardo"

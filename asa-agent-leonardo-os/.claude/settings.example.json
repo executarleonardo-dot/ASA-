@@ -1,0 +1,24 @@
+{
+  "_comment": "Exemplo de settings do Claude Code para o pacote ASA. Copie para settings.json e ajuste. NÃO inclua secrets aqui — use variáveis de ambiente. Campos aceitos dependem da versão instalada (GAP-RUNTIME GR-07).",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "ask": [
+      "Write",
+      "Edit",
+      "Bash"
+    ],
+    "deny": []
+  },
+  "env": {
+    "_comment_env": "Placeholders apenas. Defina valores reais via ambiente seguro, nunca neste arquivo.",
+    "ASA_RUNTIME": "claude_ai",
+    "ASA_PROFILE": "leonardo"
+  },
+  "hooks": {
+    "_comment_hooks": "Nenhum hook ativo na v1. Ver .claude/hooks/README.md."
+  }
+}

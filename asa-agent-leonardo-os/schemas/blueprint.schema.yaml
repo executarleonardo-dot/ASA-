@@ -1,0 +1,31 @@
+schema: LEO-SCHEMA-BLUEPRINT-v1.0
+document_type: schema
+title: "Blueprint"
+source: "AGENT_BUILD_SPEC §11, §27, §28"
+
+blueprint:
+  id: { type: string, required: true }
+  name: { type: string, required: true }
+  type: { type: enum, values: [runtime_agent, runtime_skill], required: true }
+  status: { type: enum, values: [required, optional, provisional], required: true }
+  identity: { type: object, required: true }
+  role: { type: string, required: true }
+  goal: { type: string, required: true }
+  scope:
+    must_contain: { type: list }
+    must_not_contain: { type: list }
+  inputs: { type: list }
+  outputs: { type: list }
+  allowed_tools: { type: list }
+  denied_actions: { type: list }
+  workflow: { type: list }
+  decision_rules: { type: list }
+  quality_criteria: { type: list }
+  guardrails: { type: list }
+  failure_handling: { type: list }
+  stop_conditions: { type: list }
+  examples: { type: list }
+  handoff_contract: { type: object }
+  boundaries_ref: { type: string, note: "DECISION_LOG ADR-001" }
+
+rule: "Todo componente runtime deve ter boundary explícito e função única."

@@ -1,0 +1,22 @@
+schema: LEO-CONFIG-AUTONOMY-v1.0
+document_type: config
+source: "AGENT_BUILD_SPEC §15.3 (provisória até OQ-08)"
+status: provisional
+related_gap: OQ-08
+
+autonomy_threshold:
+  status: GAP
+  decision_owner: "Leonardo Batista"
+  temporary_policy:
+    low_risk_and_reversible: may_proceed_with_explicit_assumptions
+    medium_risk: confirm_if_material_ambiguity
+    high_or_critical_risk: always_confirm
+    external_write: always_confirm
+
+confidence_handling:
+  low_confidence: "declarar [INFERÊNCIA] e confirmar conforme risco"
+  conflicting_sources: "exibir conflito e aplicar precedência ou pedir decisão"
+
+notes:
+  - "Esta política é provisória. Não declarar autonomia definitiva até OQ-08 ser decidida por Leonardo."
+  - "Escrita externa nunca é autônoma na v1."
