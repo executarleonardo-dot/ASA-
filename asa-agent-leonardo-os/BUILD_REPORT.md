@@ -1,5 +1,7 @@
 # BUILD_REPORT — ASA Agent / Gerador do Leonardo-OS
 
+> **Atualização v2.0.0:** este relatório registra o **build inicial v1.0.0**. A integração do Follow-up Report v2.0 (resolução de todas as OQs e lacunas) está em **`FOLLOW_UP_INTEGRATION_REPORT.md`**. Pacote atual: `dist/asa-agent-leonardo-os-v2.0.0.zip` (sha256 `3bef1a17…dbe69`).
+
 **Schema:** LEO-BUILD-REPORT-v1.0
 
 ```yaml

@@ -1,22 +1,47 @@
-schema: LEO-CONFIG-AUTONOMY-v1.0
+schema: LEO-CONFIG-AUTONOMY-v2.0
 document_type: config
-source: "AGENT_BUILD_SPEC §15.3 (provisória até OQ-08)"
-status: provisional
-related_gap: OQ-08
+source: "Follow-up v2.0 §19 (FUP-DEC-05) — resolve OQ-08"
+status: closed_by_policy
+supersedes: LEO-CONFIG-AUTONOMY-v1.0
+related_oq: OQ-08
 
-autonomy_threshold:
-  status: GAP
-  decision_owner: "Leonardo Batista"
-  temporary_policy:
-    low_risk_and_reversible: may_proceed_with_explicit_assumptions
-    medium_risk: confirm_if_material_ambiguity
-    high_or_critical_risk: always_confirm
-    external_write: always_confirm
+# OQ-08 RESOLVIDA por política. Três níveis formais: AUTO / CONFIRM / BLOCK.
+autonomy_policy:
+  AUTO:
+    description: "Pode prosseguir sem confirmação (reversível, sem efeito externo)."
+    actions:
+      - read
+      - reversible_classification
+      - local_generation
+      - static_tests
+      - documentation
+      - proposals
+  CONFIRM:
+    description: "Exige confirmação explícita de Leonardo/owner antes de executar."
+    actions:
+      - external_action
+      - publish
+      - send
+      - ssot_change
+      - deletion
+      - credentials
+      - private_data_access
+      - product_changing_decision
+  BLOCK:
+    description: "Nunca executar; parar e escalar."
+    actions:
+      - secret_exposure
+      - unverified_execution_claim
+      - destructive_action_without_backup
+      - guardrail_violation
 
 confidence_handling:
-  low_confidence: "declarar [INFERÊNCIA] e confirmar conforme risco"
-  conflicting_sources: "exibir conflito e aplicar precedência ou pedir decisão"
+  low_confidence: "declarar [INFERÊNCIA] e tratar conforme nível (CONFIRM em alto risco)."
+  conflicting_sources: "aplicar precedência (config/source-precedence.yaml) ou pedir decisão."
 
-notes:
-  - "Esta política é provisória. Não declarar autonomia definitiva até OQ-08 ser decidida por Leonardo."
-  - "Escrita externa nunca é autônoma na v1."
+mapping_to_risk:  # compatibilidade com a taxonomia de risco do Intent Classifier
+  low_reversible: AUTO
+  medium_material_ambiguity: CONFIRM
+  high_or_critical: CONFIRM
+  external_write: CONFIRM
+  irreversible_or_secret: BLOCK

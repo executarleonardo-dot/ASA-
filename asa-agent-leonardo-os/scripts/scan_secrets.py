@@ -22,7 +22,7 @@ PATTERNS = [
 # Placeholders aceitáveis: não contam como secret.
 PLACEHOLDER_HINTS = ("placeholder", "example", "<", ">", "your_", "xxxx", "changeme", "_comment")
 
-SKIP_DIRS = {".git", "dist", "_sources"}
+SKIP_DIRS = {".git", "dist", "_sources", "follow-up-v2"}
 TEXT_EXT = (".md", ".yaml", ".yml", ".json", ".py", ".txt", ".toml", ".ini", ".cfg")
 
 

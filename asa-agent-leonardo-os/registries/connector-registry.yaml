@@ -1,29 +1,39 @@
-schema: LEO-REGISTRY-CONNECTOR-v1.0
+schema: LEO-REGISTRY-CONNECTOR-v2.0
 document_type: registry
-status: unverified
+status: unverified_runtime
+updated_by: "Follow-up v2.0 §7 — resolve OQ-04"
 related_gaps: [GR-03, OQ-05]
 
-# Conectores são DECLARAÇÕES NÃO VERIFICADAS até o Environment Resolver inspecionar o Claude.ai.
+# ---------------------------------------------------------------------------
+# Plugins (OQ-04 CLOSED: apenas 1 plugin declarado; sem duplicação)
+# ---------------------------------------------------------------------------
+plugins:
+  - id: PLUGIN-SMALL-BUSINESS
+    type: plugin
+    role: business_context_and_execution_support
+    status: declared_dependency_requires_runtime_verification
+    use: "Estratégia, operações, clientes, oferta, receita, custos, GTM, processos, documentação empresarial."
+    limits: "Não substitui orquestrador, skills proprietárias ou SSOT pessoal; não presume capacidades."
+    runtime_gate: "Verificar disponibilidade, ações suportadas e permissões."
+    fallback: SKILL-OS-PARTNER-ADMIN
+
+# ---------------------------------------------------------------------------
+# Conectores — DECLARAÇÕES NÃO VERIFICADAS até Environment Resolver (GR-03)
+# ---------------------------------------------------------------------------
 connectors:
   - id: master_spreadsheet
-    name: "Planilha Master (LEONARDO_ADMIN_OS_MASTER.xlsx)"
+    name: "MASTER_PROJECT_ADMIN / Planilha Master"
     read: allowed_via_environment_resolver
     write: confirmation_required
-    status: "[GAP-RUNTIME] não verificado; campos graváveis indefinidos (OQ-05)"
-  - id: linear
-    write: confirmation_required
+    write_policy_ref: config/write-policy.yaml   # OQ-05 CLOSED_BY_POLICY
     status: "[GAP-RUNTIME] não verificado"
-  - id: drive
-    write: confirmation_required
-    status: "[GAP-RUNTIME] não verificado"
-  - id: github
-    write: confirmation_required
-    status: "[GAP-RUNTIME] não verificado"
-  - id: gmail
-    write: confirmation_required
-    status: "[GAP-RUNTIME] não verificado"
-  - id: notion
-    write: confirmation_required
-    status: "[GAP-RUNTIME] não verificado"
+  - { id: linear,  write: confirmation_required, status: "[GAP-RUNTIME] não verificado" }
+  - { id: drive,   write: confirmation_required, status: "[GAP-RUNTIME] não verificado" }
+  - { id: github,  write: confirmation_required, status: "[GAP-RUNTIME] não verificado" }
+  - { id: gmail,   write: confirmation_required, status: "[GAP-RUNTIME] não verificado" }
+  - { id: notion,  write: confirmation_required, status: "[GAP-RUNTIME] não verificado" }
 
-rule: "Toda escrita externa requer confirmação. Nenhuma credencial é criada no build."
+rules:
+  - "Conectores específicos não estão inventariados como instalados; são dependências de runtime."
+  - "Toda escrita externa requer confirmação (autonomy-policy CONFIRM). Nenhuma credencial no pacote."
+  - "Sem plugin disponível → fallback SKILL-OS-PARTNER-ADMIN, sem alegar capacidades externas."

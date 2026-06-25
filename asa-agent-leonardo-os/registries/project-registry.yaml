@@ -1,8 +1,8 @@
-schema: LEO-REGISTRY-PROJECT-v1.0
+schema: LEO-REGISTRY-PROJECT-v2.0
 document_type: registry
-note: >
-  Projetos ativos pertencem ao variable profile de Leonardo (ADR-003). Os dados
-  reais vivem na Planilha Master / Project Knowledge e não são inventados aqui.
+updated_by: "Follow-up v2.0 §4/§5/§20"
+project: PROJECT-LEONARDO-ECOSYSTEM
+ssot_admin: "MASTER_PROJECT_ADMIN (references/follow-up-v2/MASTER_PROJECT_ADMIN_EXTRACT.json)"
 
 owner: "Leonardo Batista"
 icp: 0
@@ -11,10 +11,44 @@ capacity:
   max_parallel_fronts: 3
   max_primary_deliverables_per_day: 1
 
-active_projects:
-  - uid: ""        # [GAP] preencher a partir da fonte de verdade (não inventar)
-    name: ""
-    phase: ""
-    status: ""
+# Programas irmãos (DEC-G0-4: Leonardo-OS não é raiz hierárquica)
+programs:
+  - { id: PRG-ASA,            classification: CONFIRMED, products: [PRD-ASA] }
+  - { id: PRG-TDAH,           classification: CONFIRMED, products: [PRD-TDAH-OS, PRD-COPILOTO-TDAH] }
+  - { id: PRG-DESK-OS,        classification: CONFIRMED, products: [PRD-DESK-OS],  priority: true }
+  - { id: PRG-LEONARDO-OS,    classification: CONFIRMED, products: [PRD-LEONARDO-OS] }
+  - { id: PRG-EDUCATION,      classification: PROPOSED,  products: [PRD-COURSE-EXPRESS],  gap: GAP-002 }
+  - { id: PRG-SMALL-BUSINESS, classification: PROPOSED,  products: [PRD-BUSINESS-SUITE],  gap: GAP-003 }
 
-rule: "[GAP] UIDs e projetos reais devem vir da Planilha Master / Project Knowledge no runtime; não preencher com dados inventados."
+products:
+  - { id: PRD-ASA,            program: PRG-ASA,            classification: CONFIRMED, documentation: PARTIAL }
+  - { id: PRD-TDAH-OS,        program: PRG-TDAH,           classification: CONFIRMED, documentation: PARTIAL }
+  - { id: PRD-COPILOTO-TDAH,  program: PRG-TDAH,           classification: CONFIRMED, documentation: PARTIAL }
+  - { id: PRD-DESK-OS,        program: PRG-DESK-OS,        classification: CONFIRMED, documentation: PRESENT }
+  - { id: PRD-LEONARDO-OS,    program: PRG-LEONARDO-OS,    classification: CONFIRMED, documentation: PARTIAL }
+  - { id: PRD-COURSE-EXPRESS, program: PRG-EDUCATION,      classification: PROPOSED,  documentation: EMBEDDED, gap: GAP-001 }
+  - { id: PRD-BUSINESS-SUITE, program: PRG-SMALL-BUSINESS, classification: PROPOSED,  documentation: PARTIAL }
+
+platforms_capabilities:
+  - { id: PLT-PADRAO-OS, type: PLATFORM, classification: CONFIRMED, role: "governança/arquitetura-base" }
+  - { id: PLT-DIRECTORY, type: PLATFORM, classification: CONFIRMED, role: "catálogo de ativos (não owner)" }
+  - { id: CAP-MACRO-PERSONALIZATION, type: CAPABILITY, classification: CONFIRMED, role: "configura ICPs/produtos" }
+  - { id: CAP-AGENT-FACTORY, type: CAPABILITY, classification: REVIEW_REQUIRED, gap: GAP-004 }
+
+offer_candidates:   # FUP-DEC-03 / GAP-006 / GAP-007
+  - { id: PRODUCT-SETUP-SUITE, status: REVIEW_REQUIRED, role: OFFER-CANDIDATE }
+  - { id: PRODUCT-AI-OS-RESET, status: REVIEW_REQUIRED, role: OFFER-CANDIDATE }
+
+controlled_modules:  # exigem BRD/MRD/PRD antes de promover
+  - MODULE-NEURO-AGENT   # GAP-005 OPEN_CONTROLLED (boundary clínico zero)
+  - MODULE-QR-ORCHESTRATOR
+  - MODULE-RECYCLE
+
+relationships:
+  - { from: PRD-LEONARDO-OS, rel: INTEGRATES_WITH, to: PRD-DESK-OS }
+  - { from: PRD-LEONARDO-OS, rel: USES, to: PRD-ASA }
+  - { from: PRD-LEONARDO-OS, rel: USES, to: CAP-MACRO-PERSONALIZATION }
+  - { from: PLT-PADRAO-OS,   rel: PROVIDES_TO, to: PROJECT-LEONARDO-ECOSYSTEM }
+
+promotion_rule: "PROPOSED → REVIEW_REQUIRED → CONFIRMED exige owner, problema, ICP, escopo, boundary, BRD/MRD/PRD, dependências, riscos, experimento e DoD."
+note: "UIDs/dados detalhados na SSOT (S7). Não inventar campos; aplicar write-policy."

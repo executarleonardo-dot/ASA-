@@ -1,0 +1,14 @@
+﻿04 · PRODUTOS,,,,,,,
+"Sete produtos; cada um com programa, autoridade, classificacao e cobertura documental.",,,,,,,
+OBJETIVO,Completar matriz BRD/MRD/PRD.,,,,,,
+PROXIMA ACAO,Validar produtos PROPOSED.,,DONO,Leonardo,STATUS,WORKING,
+product_id,Produto,program_id,authority,classification,documentation,source_basis,Escopo
+PRD-ASA,PRODUCT-ASA,PRG-ASA,WORKING,CONFIRMED,PARTIAL,FILE,"Arquitetura, metodos e ativos agenticos."
+PRD-TDAH-OS,PRODUCT-TDAH-OS,PRG-TDAH,WORKING,CONFIRMED,PARTIAL,FILE,"Sistema operacional cognitivo, 1 workflow/dia, 3 etapas, ICP TDAH."
+PRD-COPILOTO-TDAH,PRODUCT-COPILOTO-TDAH,PRG-TDAH,WORKING,CONFIRMED,PARTIAL,FILE,"Copiloto operacional, ciclos de 72h, proxima acao, evidencias."
+PRD-DESK-OS,PRODUCT-DESK-OS,PRG-DESK-OS,WORKING,CONFIRMED,PRESENT,FILE,Produto autonomo comercializavel fisico-digital.
+PRD-LEONARDO-OS,PRODUCT-LEONARDO-OS,PRG-LEONARDO-OS,WORKING,CONFIRMED,PARTIAL,FILE,"Operacao pessoal de Leonardo; integra DESK-OS, ASA e macro-personalizacao."
+PRD-COURSE-EXPRESS,PRODUCT-COURSE-EXPRESS,PRG-EDUCATION,DRAFT,PROPOSED,EMBEDDED,PROVIDED_PROJECT_CONTEXT,"Curso; trilhas TDAH, Macro, Anthropic Stack, Claude Power User. Sem arquivo proprio."
+PRD-BUSINESS-SUITE,PRODUCT-BUSINESS-SUITE,PRG-SMALL-BUSINESS,DRAFT,PROPOSED,PARTIAL,PROVIDED_PROJECT_CONTEXT,"Suite para PMEs; modulos M1, M2, M5. Maturidade a validar."
+,,,,,,,
+<- VOLTAR AO WORKSPACE,,,,,,,

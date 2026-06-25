@@ -87,5 +87,65 @@ Cada blueprint é a especificação canônica; os arquivos executáveis correspo
 |---|---|---|
 | D-09 | Schemas escritos em YAML descritivo (campos + tipo + obrigatoriedade), não JSON-Schema estrito, para legibilidade humana e validação leve. | `[INFERÊNCIA]` |
 | D-10 | Scripts de validação em Python 3 stdlib (sem dependências externas) para rodar offline. | `[INFERÊNCIA]` |
-| D-11 | Pacote versionado `v1.0.0`; nome `asa-agent-leonardo-os-v1.0.0.zip`; checksum SHA-256. | SPEC §25/§34 |
+| D-11 | Pacote versionado; checksum SHA-256 (v1.0.0 build inicial; v2.0.0 após integração do follow-up). | SPEC §25/§34 |
 | D-12 | Rotina E (Analytics) e Rotina D (Interview) especificadas com `status: provisional` (OQ-03). | SPEC §14 |
+
+---
+
+## Parte E — Integração do Follow-up Report v2.0 (ASA-FOLLOWUP-2026-06-25-v2.0.0)
+
+Insumo autoritativo: `references/follow-up-v2/ASA_LEONARDO_OS_FOLLOW_UP_REPORT_v2.0.md` (S6), extração SSOT (S7). Precedência: **decisões de Leonardo > AGENT_BUILD_SPEC**, portanto o follow-up reconcilia/atualiza decisões do build inicial.
+
+### Decisões de follow-up adotadas (S6 §18)
+
+| ID | Decisão | Status |
+|---|---|---|
+| FUP-DEC-01 | `SOT_DESING_SYSTEM` = SSOT provisória do Design System; `Desing_System_.txt` = REFERENCE. Definitiva só após diff semântico (552 registros/variante). | adotada (provisional) |
+| FUP-DEC-02 | `Contextos_adicionais_` = cluster primário **C04** (Architecture/System); C08 apenas em seções visuais. | adotada |
+| FUP-DEC-03 | **Setup Suite** e **AI OS Reset** = ofertas candidatas, não produtos confirmados. | adotada |
+| FUP-DEC-04 | **Agent Factory** = capability implementada por `AGENT-CAPABILITY-BUILDER` + `WF-BUILD-MISSING-CAPABILITY`; documento dedicado ainda obrigatório. | adotada (partial) |
+| FUP-DEC-05 | **Write policy** e **autonomy policy** passam a contrato de governança. | adotada → `config/write-policy.yaml`, `config/autonomy-policy.yaml` |
+
+### ADR-007 — Boundary OS Partner Admin × Leonardo Orchestrator (resolve OQ-02/OQ-06)
+
+A sobreposição "Leonardo S" × "Leonardo Admin" é resolvida por **dois planos**:
+
+```text
+OS PARTNER ADMIN (plano de controle)      LEONARDO ORCHESTRATOR (plano de estado)
+├── conta e projetos                      ├── estado canônico do projeto
+├── documentação e arquitetura            ├── fase e gate
+├── administração de negócio              ├── decisões e tracker
+├── validação e packaging                 ├── roteamento de intenção
+└── release                               └── próximas ações
+```
+
+`AGENT-LEONARDO-ORCHESTRATOR` (master router) é powered by `SKILL-LEONARDO-ORCHESTRATOR` + `SKILL-OS-PARTNER-ADMIN`. Ver `registries/agent-registry.yaml`.
+
+### ADR-008 — Catalogar (não reinventar) o stack proprietário
+
+O follow-up revela o stack real de Leonardo: **10 skills proprietárias (SSOT FILE-025), 5 agentes canônicos, 11 rotas de comando, 9 workflows**. Estes **já existem** no ecossistema de Leonardo e são extraídos da SSOT, não construídos por este pacote. Decisão: **catalogá-los** em `registries/` e `references/follow-up-v2/`, preservando a v1 (1 orquestrador + 3 Skills) como implementação de referência, com mapeamento explícito (ADR-009). Materializar SKILL.md de cada um seria inventar/duplicar a SSOT → proibido.
+
+### ADR-009 — Mapeamento v1 (implementado) → stack canônico (catalogado)
+
+| Componente v1 (este pacote) | Equivalente canônico (S6) |
+|---|---|
+| agente `asa-orchestrator` | `AGENT-LEONARDO-ORCHESTRATOR` (master router) |
+| skill `leonardo-admin` | `SKILL-OS-PARTNER-ADMIN` + `SKILL-LEONARDO-ORCHESTRATOR` (control/state) |
+| skill `asa-admin` | `SKILL-META-TEMPLATE-SPECIALIST` + `SKILL-AGENTIC-PROBLEM-SOLVING` (programa ASA) |
+| skill `deskos` | `SKILL-DESK-OS` (DESK-OS-Full-Stack-Skill) |
+| WF1/WF2/WF3 (3 etapas visíveis) | interface de superfície dos 9 workflows operacionais (S6 §10) |
+
+A v1 permanece válida como o "menor conjunto suficiente"; o catálogo canônico é a referência de expansão para os Ciclos de runtime.
+
+### Write policy (FUP-DEC-05) — resumo
+
+- **EDITABLE:** `classification_status/status`, `documentation_status`, `next_action`, `review_required`, owner, due date, notas de validação.
+- **CONTROLLED:** `authority_status`, parent/relation, SSOT — só owner/governança.
+- **COMPUTED:** contagens, KPIs, cobertura, fórmulas, indicadores.
+- **LOCKED/IMMUTABLE:** `source_file`, `source_hash`, `source_locator`, conteúdo bruto, IDs publicados, decisões aprovadas, evidências de validação.
+
+### Autonomy policy (FUP-DEC-05) — resumo
+
+- **AUTO:** leitura, classificação reversível, geração local, testes estáticos, documentação, propostas.
+- **CONFIRM:** ação externa, publicação, envio, alteração de SSOT, exclusão, credenciais, dados privados, decisão que muda produto.
+- **BLOCK:** exposição de segredo, alegação de execução não verificada, ação destrutiva sem backup, violação de guardrail.

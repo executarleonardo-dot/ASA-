@@ -1,0 +1,13 @@
+﻿16 · DUPLICATAS E VERSOES,,,,,,
+DUP-001 (hash identico) e grupos de versao. Nenhuma copia apagada.,,,,,,
+OBJETIVO,Definir SSOT do Design System.,,,,,
+PROXIMA ACAO,Comparar variantes.,,DONO,Leonardo,STATUS,WORKING
+group_id,papel,item,hash12,nota,,
+DUP-001,PRIMARY,GTM_RATIONALE.txt,9f7be64c9de1,preferred_copy=true; conteudo identico por hash.,,
+DUP-001,DUPLICATE_COPY,BUSINESS_GMT_RATIONAL_,9f7be64c9de1,preferred_copy=false; nao apagar do inventario.,,
+VG-DESIGN-SYSTEM,VARIANT,SOT_DESING_SYSTEM,41b66bfa0c08,"Mesmo resumo, hash diferente -> variante/versao.",,
+VG-DESIGN-SYSTEM,VARIANT,Desing_System_.txt,741df5e56b63,"Mesmo resumo, hash diferente -> variante/versao. comparison_status=REVIEW_REQUIRED.",,
+VG-DESKOS-MASTER,PREFERRED,03DESKOSPLANILHAMESTRAV3OUTPUTSBENCHMARK.xlsx,d463c87ca843,41 abas; versao mais completa (V3).,,
+VG-DESKOS-MASTER,SUPERSEDED,03DESKOSPLANILHAMESTRA.xlsx,90a3b94d359d,8 abas; versao anterior (v1). supersedes pelo V3.,,
+,,,,,,
+<- VOLTAR AO WORKSPACE,,,,,,

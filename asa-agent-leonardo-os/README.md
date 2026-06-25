@@ -1,6 +1,8 @@
 # ASA Agent — Gerador do Leonardo-OS
 
-**Versão:** 1.0.0 · **Estado:** Draft for Build · **Build:** Claude Code · **Runtime v1:** Claude.ai Projects · **Idioma:** PT-BR
+**Versão:** 2.0.0 (RC1) · **Estado:** Ready for Controlled Runtime Validation · **Build:** Claude Code · **Runtime v1:** Claude.ai Projects · **Idioma:** PT-BR
+
+> **v2.0.0** integra o **Follow-up Report v2.0**: resolve as 8 Open Questions, trata as 9 lacunas do workbook e cataloga o stack proprietário real (10 skills, 5 agentes, 11 rotas, 9 workflows). Ver `FOLLOW_UP_INTEGRATION_REPORT.md` e `references/follow-up-v2/`. Os 7 gaps de runtime (GR-01..07) permanecem abertos por natureza, com critério de fechamento.
 
 O **ASA (Agentic Systems Architect)** é o orquestrador do **Leonardo-OS**: interpreta uma intenção, seleciona o menor stack suficiente, compõe um especialista temporário, executa um workflow em **3 etapas visíveis**, produz um entregável verificável, registra decisões/evidências e encaminha o estado ao DESK-OS.
 

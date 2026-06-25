@@ -8,7 +8,7 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSION = "1.0.0"
+VERSION = "2.0.0"
 PKG_NAME = f"asa-agent-leonardo-os-v{VERSION}.zip"
 DIST = os.path.join(ROOT, "dist")
 EXCLUDE_DIRS = {".git", "dist", "__pycache__", ".obsidian"}

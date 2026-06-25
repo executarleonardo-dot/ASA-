@@ -80,6 +80,34 @@ preserved_binary_sources:
       Conteúdo não parseado. Campos graváveis indefinidos (OQ-05). Toda escrita
       requer confirmação; leitura permitida apenas via Environment Resolver no runtime.
 
+follow_up_v2:
+  - id: S6
+    name: "ASA / Leonardo-OS — Follow-up Report v2.0"
+    canonical_id: ASA-FOLLOWUP-2026-06-25-v2.0.0
+    status: authoritative_consolidation
+    origin: "ASA_LEONARDO_OS_FOLLOW_UP_PACK_v2.0.zip (fornecido por Leonardo; checksum verificado)"
+    sha256_pack: "df29ce2f635fd3a85cafb1ea9c0c09056c5f7f2ea56e2eef2e578589259fe43d"
+    files:
+      - references/follow-up-v2/ASA_LEONARDO_OS_FOLLOW_UP_REPORT_v2.0.md
+      - references/follow-up-v2/ASA_LEONARDO_OS_FOLLOW_UP_REPORT_v2.0.docx
+    role: "Resolve as OQs e lacunas do BUILD_REPORT; consolida o stack proprietário real."
+  - id: S7
+    name: "MASTER_PROJECT_ADMIN — extração integral (23 abas)"
+    canonical_id: MASTER-PROJECT-ADMIN-EXTRACT
+    status: preserved_evidence
+    origin: "ASA_LEONARDO_OS_FOLLOW_UP_PACK_v2.0.zip"
+    files:
+      - references/follow-up-v2/MASTER_PROJECT_ADMIN_EXTRACT.json
+      - references/follow-up-v2/evidence_csv/  # 23 CSV (uma por aba)
+    rule: >
+      Evidência preservada. SSOT administrativa = MASTER_PROJECT_ADMIN. Não reescrever
+      campos LOCKED; aplicar write-policy (config/write-policy.yaml).
+
+precedence_note: >
+  O Follow-up v2.0 (S6) é entrada autoritativa de Leonardo e prevalece sobre inferências
+  de implementação; em conflito com o AGENT_BUILD_SPEC, registrar como decisão explícita
+  (DECISION_LOG Parte E) — decisões de Leonardo > spec.
+
 precedence:
   - security_and_governance
   - explicit_leonardo_decisions

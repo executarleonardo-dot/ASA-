@@ -1,30 +1,56 @@
-schema: LEO-REGISTRY-AGENT-v1.0
+schema: LEO-REGISTRY-AGENT-v2.0
 document_type: registry
+updated_by: "Follow-up v2.0 §8"
 
-runtime_agents:
+# ---------------------------------------------------------------------------
+# (A) Agente runtime implementado neste pacote (v1)
+# ---------------------------------------------------------------------------
+runtime_agents_v1:
   - id: LEO-AGENT-ASA-ORCHESTRATOR-v1
     name: ASA Orchestrator
     file: .claude/agents/asa-orchestrator.md
     blueprint: blueprints/ASA_ORCHESTRATOR_AGENT.md
     status: required
     scope: runtime_v1
+    maps_to_canonical: AGENT-LEONARDO-ORCHESTRATOR
 
+# ---------------------------------------------------------------------------
+# (B) Subagentes build-time (Claude Code) — não fazem parte do runtime
+# ---------------------------------------------------------------------------
 build_time_agents:
-  - id: asa-build-architect
-    file: .claude/agents/asa-build-architect.md
-    permission_mode: plan_first
-    scope: build_time
-  - id: asa-skill-engineer
-    file: .claude/agents/asa-skill-engineer.md
-    permission_mode: normal
-    scope: build_time
-  - id: asa-agent-engineer
-    file: .claude/agents/asa-agent-engineer.md
-    permission_mode: normal
-    scope: build_time
-  - id: asa-quality-governance-auditor
-    file: .claude/agents/asa-quality-governance-auditor.md
-    permission_mode: read_only
-    scope: build_time
+  - { id: asa-build-architect,             file: .claude/agents/asa-build-architect.md,             permission_mode: plan_first, scope: build_time }
+  - { id: asa-skill-engineer,              file: .claude/agents/asa-skill-engineer.md,              permission_mode: normal,     scope: build_time }
+  - { id: asa-agent-engineer,              file: .claude/agents/asa-agent-engineer.md,              permission_mode: normal,     scope: build_time }
+  - { id: asa-quality-governance-auditor,  file: .claude/agents/asa-quality-governance-auditor.md,  permission_mode: read_only,  scope: build_time }
 
-rule: "Exatamente 1 agente runtime (ADR-002). Subagentes não fazem parte do runtime v1."
+# ---------------------------------------------------------------------------
+# (C) Agentes canônicos do ecossistema (catalogados — ADR-008)
+#     Fonte: Follow-up v2.0 §8. Materialização/import = runtime (GR-02).
+# ---------------------------------------------------------------------------
+canonical_agents:
+  - id: AGENT-LEONARDO-ORCHESTRATOR
+    role: master_router
+    powered_by: [SKILL-LEONARDO-ORCHESTRATOR, SKILL-OS-PARTNER-ADMIN]
+    responsibilities: "Normalizar intenção; carregar estado; selecionar workflow/skill/plugin; impor gates; atualizar decisões; devolver próxima ação."
+  - id: AGENT-PERSONAL-OPERATOR
+    role: personal_execution
+    powered_by: [SKILL-SETUP-OS, SKILL-COGNITIVE-TRIGGER, SKILL-DESK-OS]
+    responsibilities: "Planejamento semanal; prioridade; próxima ação; redução de carga cognitiva."
+  - id: AGENT-BUSINESS-PARTNER
+    role: small_business_execution
+    powered_by: [SKILL-OS-PARTNER-ADMIN, PLUGIN-SMALL-BUSINESS, SKILL-AGENTIC-PROBLEM-SOLVING]
+    responsibilities: "Produto; operações; GTM; documentos empresariais; decisão; risco."
+  - id: AGENT-CAPABILITY-BUILDER
+    role: specialist_and_skill_factory
+    powered_by: [SKILL-META-TEMPLATE-SPECIALIST, SKILL-STANDALONE-ORCHESTRATOR-TEMPLATE, SKILL-CMD-01-PPS]
+    responsibilities: "Detectar gap; construir especialista/workflow/comando/skill; empacotar e liberar. (= Agent Factory, FUP-DEC-04)"
+  - id: AGENT-EDITORIAL-OPERATOR
+    role: content_operations
+    powered_by: [SKILL-EDITORIAL-OS, SKILL-COGNITIVE-TRIGGER]
+    responsibilities: "Planejamento editorial; produção; validação de evidência; revisão; analytics."
+
+boundary_resolution:  # OQ-02 / OQ-06 (ADR-007)
+  os_partner_admin: [conta_e_projetos, documentacao_e_arquitetura, administracao_de_negocio, validacao_e_packaging, release]
+  leonardo_orchestrator: [estado_canonico, fase_e_gate, decisoes_e_tracker, roteamento_de_intencao, proximas_acoes]
+
+rule: "1 agente runtime no pacote v1 (ADR-002). Catálogo canônico de 5 agentes é referência de expansão para runtime."

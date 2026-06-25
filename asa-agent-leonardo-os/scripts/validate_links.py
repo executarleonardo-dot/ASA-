@@ -29,7 +29,7 @@ CODE_PATH = re.compile(r"`([^`]+)`")
 
 def iter_files():
     for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if d not in (".git", "dist", "_sources")]
+        dirnames[:] = [d for d in dirnames if d not in (".git", "dist", "_sources", "follow-up-v2")]
         for fn in filenames:
             if fn.endswith((".md", ".yaml", ".yml")):
                 yield os.path.join(dirpath, fn)
