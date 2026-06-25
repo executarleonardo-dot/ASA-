@@ -1,0 +1,36 @@
+schema: LEO-REGISTRY-ALIAS-v2.0
+document_type: registry
+source: "AGENT_BUILD_SPEC §24 OQ-02 + Follow-up v2.0 §19 (CLOSED)"
+
+aliases:
+  - canonical: "AGENT-LEONARDO-ORCHESTRATOR"
+    alias: "Leonardo S"
+    type: agent_identity
+    note: "OQ-02 CLOSED — 'Leonardo S' = plano de estado do projeto (orchestrator)."
+  - canonical: "SKILL-OS-PARTNER-ADMIN"
+    alias: "Leonardo Admin"
+    type: skill_identity
+    note: "OQ-02 CLOSED — 'Leonardo Admin' = plano de controle administrativo (account/project)."
+  - canonical: "ASA"
+    alias: "Agentic Systems Architect"
+    type: role
+  - canonical: "ASA"
+    alias: "Meta-Agent Orchestrator"
+    type: role_alternative
+    note: "Papel oficial = Agentic Systems Architect."
+  - canonical: "DESK-OS"
+    alias: "DeskOS"
+    type: system_name
+  - canonical: "CAP-AGENT-FACTORY"
+    alias: "Agent Factory"
+    type: capability
+    note: "FUP-DEC-04 — implementada por AGENT-CAPABILITY-BUILDER + WF-BUILD-MISSING-CAPABILITY."
+
+# Mapeamento v1 (este pacote) → canônico (ADR-009)
+v1_to_canonical:
+  - { v1: "agent:asa-orchestrator", canonical: AGENT-LEONARDO-ORCHESTRATOR }
+  - { v1: "skill:leonardo-admin",   canonical: [SKILL-OS-PARTNER-ADMIN, SKILL-LEONARDO-ORCHESTRATOR] }
+  - { v1: "skill:asa-admin",        canonical: [SKILL-META-TEMPLATE-SPECIALIST, SKILL-AGENTIC-PROBLEM-SOLVING] }
+  - { v1: "skill:deskos",           canonical: [SKILL-DESK-OS] }
+
+rule: "Preservar aliases sem fundir identidades; o canonical prevalece em decisões."

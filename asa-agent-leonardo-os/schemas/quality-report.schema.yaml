@@ -1,0 +1,32 @@
+schema: LEO-SCHEMA-QUALITY-REPORT-v1.0
+document_type: schema
+title: "Quality Report"
+source: "AGENT_BUILD_SPEC §22"
+
+quality_report:
+  report_id: { type: string, required: true }
+  target_artifact: { type: string, required: true }
+  anti_genericity:
+    uses_leonardo_context: { type: boolean }
+    considers_projects_stack_constraints: { type: boolean }
+    would_change_for_other_user: { type: boolean }
+    states_limits_and_gaps: { type: boolean }
+    has_specific_next_action: { type: boolean }
+    verdict: { type: enum, values: [pass, rewrite] }
+  technical_criteria:
+    correctness: { type: enum, values: [pass, fail] }
+    completeness: { type: enum, values: [pass, fail] }
+    safety: { type: enum, values: [pass, fail] }
+    consistency: { type: enum, values: [pass, fail] }
+    executability: { type: enum, values: [pass, fail] }
+    traceability: { type: enum, values: [pass, fail] }
+    modularity: { type: enum, values: [pass, fail] }
+    testability: { type: enum, values: [pass, fail] }
+    readability: { type: enum, values: [pass, fail] }
+    progressive_disclosure: { type: enum, values: [pass, fail] }
+    no_duplication: { type: enum, values: [pass, fail] }
+    clear_boundaries: { type: enum, values: [pass, fail] }
+  overall: { type: enum, values: [pass, fail], required: true }
+  notes: { type: list }
+
+rule: "Falha em qualquer critério crítico (anti-genericity, safety) implica reescrita."

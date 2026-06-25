@@ -1,0 +1,30 @@
+schema: LEO-SCHEMA-DESKOS-HANDOFF-v1.0
+document_type: schema
+title: "DeskOS Handoff"
+source: "AGENT_BUILD_SPEC §20"
+
+deskos_handoff:
+  handoff_id: { type: string, required: true }
+  date: { type: string, format: date, required: true }
+  workflow:
+    id: { type: string }
+    name: { type: string }
+    stage:
+      number: { type: integer, range: [1, 3] }
+      name: { type: string }
+  system_activity: { type: string }
+  user_action_required: { type: string }
+  next_gate: { type: string }
+  primary_deliverable: { type: string }
+  status: { type: enum, values: [preparing, executing, awaiting, validating, completed, blocked], required: true }
+  blocker: { type: string }
+  evidence_refs: { type: list }
+  recycle:
+    classification: { type: string }
+    carry_forward: { type: boolean, default: false }
+    notes: { type: string }
+
+qr_contract:
+  status: abstract
+  related_gap: OQ-07
+  note: "Contrato QR permanece abstrato na v1; não implementar QR funcional."

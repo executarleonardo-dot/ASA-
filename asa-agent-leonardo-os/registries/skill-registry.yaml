@@ -1,0 +1,58 @@
+schema: LEO-REGISTRY-SKILL-v2.0
+document_type: registry
+updated_by: "Follow-up v2.0 §6 (SSOT FILE-025)"
+
+# ---------------------------------------------------------------------------
+# (A) Skills implementadas neste pacote (v1 — menor conjunto suficiente)
+# ---------------------------------------------------------------------------
+runtime_skills_v1:
+  - id: LEO-SKILL-LEONARDO-ADMIN-v1
+    name: Leonardo Admin
+    file: .claude/skills/leonardo-admin/SKILL.md
+    blueprint: blueprints/LEONARDO_ADMIN_SKILL.md
+    boundary: "contexto operacional de Leonardo"
+    status: required
+    maps_to_canonical: [SKILL-OS-PARTNER-ADMIN, SKILL-LEONARDO-ORCHESTRATOR]
+  - id: LEO-SKILL-ASA-ADMIN-v1
+    name: ASA Admin
+    file: .claude/skills/asa-admin/SKILL.md
+    blueprint: blueprints/ASA_ADMIN_SKILL.md
+    boundary: "engenharia do sistema agêntico"
+    status: required
+    maps_to_canonical: [SKILL-META-TEMPLATE-SPECIALIST, SKILL-AGENTIC-PROBLEM-SOLVING]
+  - id: LEO-SKILL-DESKOS-v1
+    name: DeskOS
+    file: .claude/skills/deskos/SKILL.md
+    blueprint: blueprints/DESKOS_SKILL.md
+    boundary: "adaptador estado -> DESK-OS"
+    status: required
+    maps_to_canonical: [SKILL-DESK-OS]
+
+# ---------------------------------------------------------------------------
+# (B) Stack proprietário canônico (catalogado, NÃO reinventado — ADR-008)
+#     Fonte: SSOT FILE-025 / Follow-up v2.0 §6. Materialização = runtime (GR-02).
+# ---------------------------------------------------------------------------
+canonical_skills:
+  - { id: SKILL-SETUP-OS,                       name: setup-os,                        priority: P0, layer: onboarding_and_system_configuration,        status: core,                role: "FAQ, intake, diagnóstico 3PN, clusterização, stack, especialista, Prisma." }
+  - { id: SKILL-OS-PARTNER-ADMIN,               name: OS-PARTNER-ADMIN,                priority: P0, layer: account_and_project_administration,        status: core,                role: "Administra conta/projeto Claude.ai; control plane." }
+  - { id: SKILL-LEONARDO-ORCHESTRATOR,          name: leonardo-os-orchestrator,        priority: P0, layer: project_state_and_execution_orchestration, status: core,                role: "Estado canônico, fases, gates, decisões, próximas 3 tarefas." }
+  - { id: SKILL-STANDALONE-ORCHESTRATOR-TEMPLATE, name: standalone-orchestrator-template, priority: P2, layer: reusable_orchestrator_blueprint,         status: factory_reference,   role: "Blueprint reutilizável de orquestrador standalone." }
+  - { id: SKILL-COGNITIVE-TRIGGER,              name: cognitive-framework-router,      priority: P0, layer: reasoning_and_information_structure,       status: core_cross_cutting,  role: "Seleciona frameworks cognitivos mínimos." }
+  - { id: SKILL-AGENTIC-PROBLEM-SOLVING,        name: agentic-problem-solving,         priority: P0, layer: complex_problem_resolution,             status: core,                role: "Enquadra/resolve problemas ambíguos." }
+  - { id: SKILL-META-TEMPLATE-SPECIALIST,       name: meta-template-specialist,        priority: P1, layer: capability_and_artifact_factory,        status: core_factory,        role: "Converte conceitos em agentes/comandos/schemas/workflows/skills." }
+  - { id: SKILL-EDITORIAL-OS,                   name: editorial-os-template,           priority: P1, layer: content_and_editorial_operations,        status: domain_skill,        role: "Setup/sprint/produção/revisão/analytics editorial." }
+  - { id: SKILL-DESK-OS,                        name: DESK-OS-Full-Stack-Skill,        priority: P0, layer: physical_digital_execution_interface,     status: core_runtime,        role: "Schema semanal, render DESK-OS, QR, start/status/close-day, Recycle." }
+  - { id: SKILL-CMD-01-PPS,                     name: CMD-01-PPS,                      priority: P1, layer: project_packaging_and_release,           status: operational_utility, role: "Escaneia, normaliza, classifica, empacota releases." }
+
+functional_hierarchy:
+  control_plane: [SKILL-OS-PARTNER-ADMIN, SKILL-LEONARDO-ORCHESTRATOR]
+  onboarding: [SKILL-SETUP-OS]
+  cross_cutting_reasoning: [SKILL-COGNITIVE-TRIGGER]
+  problem_solving: [SKILL-AGENTIC-PROBLEM-SOLVING]
+  capability_factory: [SKILL-META-TEMPLATE-SPECIALIST, SKILL-STANDALONE-ORCHESTRATOR-TEMPLATE]
+  domains: [SKILL-EDITORIAL-OS, SKILL-DESK-OS]
+  packaging_release: [SKILL-CMD-01-PPS]
+
+selection_rule: "Menor conjunto suficiente; função distinta por skill; sem ativação duplicada; verificar capacidade nativa antes de criar artefato."
+oq04_resolution: "Variantes de Design System são documentos, não plugins/skills (CLOSED)."
+notes: "Catálogo completo e triggers/outputs por skill em references/follow-up-v2/...REPORT_v2.0.md §6."

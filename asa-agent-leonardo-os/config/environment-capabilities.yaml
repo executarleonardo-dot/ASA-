@@ -1,0 +1,38 @@
+schema: LEO-CONFIG-ENV-CAPABILITIES-v1.0
+document_type: config
+source: "AGENT_BUILD_SPEC §17"
+status: template_unverified
+related_gaps: [GR-01, GR-02, GR-03]
+
+# Preenchido pelo Environment Resolver no runtime Claude.ai.
+# Capacidades de documentos históricos são DECLARAÇÕES NÃO VERIFICADAS até a inspeção.
+
+environment_manifest:
+  checked_at: ""            # [GAP-RUNTIME] preencher na inspeção
+  runtime: "claude_ai"
+  account_plan: ""          # [GAP-RUNTIME]
+  model:
+    available: []           # [GAP-RUNTIME]
+    selected: ""
+  projects:
+    available: null         # [GAP-RUNTIME]
+  memory:
+    available: null         # [GAP-RUNTIME]
+    write_requires_confirmation: true
+  skills:
+    installed: []           # [GAP-RUNTIME] esperado: leonardo-admin, asa-admin, deskos
+  connectors:
+    active: []              # [GAP-RUNTIME]
+    unavailable: []
+  artifacts:
+    available: null         # [GAP-RUNTIME]
+  permissions:
+    external_write: confirmation_required
+    destructive_action: confirmation_required
+  gaps:
+    - "[GAP-RUNTIME] Todas as capacidades acima exigem verificação no Claude.ai antes do uso real."
+
+rule_critical: >
+  Capacidades descritas em documentos históricos devem ser consideradas declarações
+  não verificadas até a inspeção do ambiente. O ASA não deve afirmar suporte a um
+  recurso que o Environment Resolver não confirmou.

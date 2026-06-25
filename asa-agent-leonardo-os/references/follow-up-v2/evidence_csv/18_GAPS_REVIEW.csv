@@ -1,0 +1,16 @@
+﻿18 · LACUNAS E REVISAO,,,,,,
+"Entidades sem arquivo, ambiguidades e decisoes nao confirmadas. Registrar lacuna != inventar.",,,,,,
+OBJETIVO,Validar cada lacuna com evidencia.,,,,,
+PROXIMA ACAO,Revisar GAP-001..009.,,DONO,Leonardo,STATUS,REVIEW_REQUIRED
+gap_id,entidade,descricao,documentation_status,classification_status,proxima_acao,source_basis
+GAP-001,PRD-COURSE-EXPRESS,Course Express sem arquivo proprio,EMBEDDED,REVIEW_REQUIRED,Validar trilhas e materiais; nao inventar requisitos.,PROVIDED_PROJECT_CONTEXT
+GAP-002,PRG-EDUCATION,Programa Education sem documentacao dedicada,MISSING,PROPOSED,Confirmar escopo e ofertas.,PROVIDED_PROJECT_CONTEXT
+GAP-003,PRG-SMALL-BUSINESS,Maturidade de Business Suite/GTM Showroom/Agency Kit a validar,PARTIAL,PROPOSED,Validar nivel de maturidade de cada entidade.,PROVIDED_PROJECT_CONTEXT
+GAP-004,CAP-AGENT-FACTORY,Agent Factory sem documentacao confirmada,MISSING,REVIEW_REQUIRED,Avaliar existencia e escopo.,PROVIDED_PROJECT_CONTEXT
+GAP-005,MODULE-NEURO-AGENT,Neuro-Agent a avaliar,EMBEDDED,REVIEW_REQUIRED,Confirmar como modulo do TDAH-OS.,EMBEDDED
+GAP-006,PRODUCT-SETUP-SUITE,Setup Suite a avaliar,EMBEDDED,REVIEW_REQUIRED,Confirmar como oferta do Leonardo OS.,PROVIDED_PROJECT_CONTEXT
+GAP-007,PRODUCT-AI-OS-RESET,AI OS Reset a avaliar,EMBEDDED,REVIEW_REQUIRED,Confirmar como oferta do Leonardo OS.,PROVIDED_PROJECT_CONTEXT
+GAP-008,VG-DESIGN-SYSTEM,Duas variantes do Design System com hashes diferentes,PARTIAL,REVIEW_REQUIRED,Comparar semanticamente e definir SSOT vs SUPERSEDED.,FILE
+GAP-009,Contextos_adicionais_,Cluster do arquivo DESK-OS a definir apos leitura das secoes,PARTIAL,REVIEW_REQUIRED,Definir cluster principal.,FILE
+,,,,,,
+<- VOLTAR AO WORKSPACE,,,,,,

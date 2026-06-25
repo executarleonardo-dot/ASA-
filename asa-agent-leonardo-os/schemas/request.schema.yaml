@@ -1,0 +1,25 @@
+schema: LEO-SCHEMA-REQUEST-v1.0
+document_type: schema
+title: "Request"
+source: "AGENT_BUILD_SPEC §11.1 inputs"
+
+request:
+  raw_input: { type: string, required: true }
+  workflow_type: { type: string, enum: [WF1, WF2, WF3, auto], required: false }
+  project_uid: { type: string, required: false }
+  urgency: { type: string, enum: [low, medium, high], required: false }
+  expected_output: { type: string, required: false }
+
+context:
+  active_project: { type: string }
+  active_phase: { type: string }
+  previous_workflow_id: { type: string }
+  available_assets: { type: list }
+  blockers: { type: list }
+
+constraints:
+  time_available: { type: string }
+  fronts_in_progress: { type: integer, default: 0 }
+  tools_restricted: { type: list }
+
+missing_data: { type: list, note: "itens críticos viram pergunta; não-críticos viram [GAP]" }

@@ -1,0 +1,51 @@
+schema: LEO-CONFIG-WRITE-POLICY-v1.0
+document_type: config
+source: "Follow-up v2.0 §19 (FUP-DEC-05) — resolve OQ-05"
+status: closed_by_policy
+related_oq: OQ-05
+applies_to: "MASTER_PROJECT_ADMIN (SSOT administrativa) e demais registros do ecossistema"
+
+# OQ-05 RESOLVIDA por política: quais campos podem ser escritos e por quem.
+write_policy:
+  EDITABLE:
+    description: "Campos editáveis no fluxo operacional normal."
+    fields:
+      - classification_status
+      - status
+      - documentation_status
+      - next_action
+      - review_required
+      - owner
+      - due_date
+      - validation_notes
+  CONTROLLED:
+    description: "Somente owner/governança altera."
+    fields:
+      - authority_status
+      - parent
+      - relation
+      - ssot
+  COMPUTED:
+    description: "Derivados; não editar manualmente."
+    fields:
+      - counts
+      - kpis
+      - coverage
+      - formulas
+      - indicators
+  LOCKED:
+    description: "Imutável; nunca sobrescrever."
+    fields:
+      - source_file
+      - source_hash
+      - source_locator
+      - raw_content
+      - published_ids
+      - approved_decisions
+      - validation_evidence
+
+rules:
+  - "Toda escrita em SSOT (master spreadsheet) requer confirmação (CONFIRM) — ver autonomy-policy."
+  - "Leitura sempre permitida (AUTO)."
+  - "Campos LOCKED em violação → BLOCK e escalar."
+  - "Planilha Master preservada como binário no build; este contrato governa a escrita no runtime."

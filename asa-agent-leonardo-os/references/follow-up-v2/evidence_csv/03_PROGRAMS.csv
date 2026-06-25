@@ -1,0 +1,13 @@
+﻿03 · PROGRAMAS,,,,,,
+Seis programas: quatro centrais confirmados e dois propostos.,,,,,,
+OBJETIVO,Manter separacao de produtos.,,,,,
+PROXIMA ACAO,Confirmar Education e Small Business.,,DONO,Leonardo,STATUS,WORKING
+program_id,Programa,Produtos,authority,classification,source_basis,Escopo
+PRG-ASA,PROGRAM-ASA,PRODUCT-ASA,CONFIRMED,CONFIRMED,FILE,"Arquitetura de sistemas agenticos, orquestracao, agentes, avaliacao, first principles."
+PRG-TDAH,PROGRAM-TDAH,"PRODUCT-TDAH-OS, PRODUCT-COPILOTO-TDAH",CONFIRMED,CONFIRMED,FILE,Sistemas operacionais cognitivos neuroinclusivos para ICP TDAH.
+PRG-DESK-OS,PROGRAM-DESK-OS,PRODUCT-DESK-OS,CONFIRMED,CONFIRMED,FILE,"Sistema fisico-digital A4, workflows, QR contextual, produto comercial."
+PRG-LEONARDO-OS,PROGRAM-LEONARDO-OS,PRODUCT-LEONARDO-OS,CONFIRMED,CONFIRMED,FILE,Sistema operacional pessoal e empresarial; stack proprietario de skills; orquestrador.
+PRG-EDUCATION,PROGRAM-EDUCATION,PRODUCT-COURSE-EXPRESS,DRAFT,PROPOSED,PROVIDED_PROJECT_CONTEXT,Programa de educacao; Course Express e trilhas. Inserido como proposto.
+PRG-SMALL-BUSINESS,PROGRAM-SMALL-BUSINESS,PRODUCT-BUSINESS-SUITE,DRAFT,PROPOSED,PROVIDED_PROJECT_CONTEXT,"Programa Small Business; Business Suite, GTM Showroom, Agency Kit. Inserido como proposto."
+,,,,,,
+<- VOLTAR AO WORKSPACE,,,,,,

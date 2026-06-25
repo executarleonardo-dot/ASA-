@@ -1,0 +1,47 @@
+schema: LEO-CONFIG-AUTONOMY-v2.0
+document_type: config
+source: "Follow-up v2.0 §19 (FUP-DEC-05) — resolve OQ-08"
+status: closed_by_policy
+supersedes: LEO-CONFIG-AUTONOMY-v1.0
+related_oq: OQ-08
+
+# OQ-08 RESOLVIDA por política. Três níveis formais: AUTO / CONFIRM / BLOCK.
+autonomy_policy:
+  AUTO:
+    description: "Pode prosseguir sem confirmação (reversível, sem efeito externo)."
+    actions:
+      - read
+      - reversible_classification
+      - local_generation
+      - static_tests
+      - documentation
+      - proposals
+  CONFIRM:
+    description: "Exige confirmação explícita de Leonardo/owner antes de executar."
+    actions:
+      - external_action
+      - publish
+      - send
+      - ssot_change
+      - deletion
+      - credentials
+      - private_data_access
+      - product_changing_decision
+  BLOCK:
+    description: "Nunca executar; parar e escalar."
+    actions:
+      - secret_exposure
+      - unverified_execution_claim
+      - destructive_action_without_backup
+      - guardrail_violation
+
+confidence_handling:
+  low_confidence: "declarar [INFERÊNCIA] e tratar conforme nível (CONFIRM em alto risco)."
+  conflicting_sources: "aplicar precedência (config/source-precedence.yaml) ou pedir decisão."
+
+mapping_to_risk:  # compatibilidade com a taxonomia de risco do Intent Classifier
+  low_reversible: AUTO
+  medium_material_ambiguity: CONFIRM
+  high_or_critical: CONFIRM
+  external_write: CONFIRM
+  irreversible_or_secret: BLOCK

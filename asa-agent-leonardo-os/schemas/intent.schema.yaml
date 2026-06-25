@@ -1,0 +1,15 @@
+schema: LEO-SCHEMA-INTENT-v1.0
+document_type: schema
+title: "Intent"
+source: "AGENT_BUILD_SPEC §15.1"
+
+intent:
+  domain: { type: enum, values: [build, communicate, operate], required: true }
+  use_case: { type: enum, values: [diagnose, research, plan, write, build, review, administer, custom], required: true }
+  complexity: { type: enum, values: [simple, compound, open], required: true }
+  risk: { type: enum, values: [low, medium, high, critical], required: true }
+  confidence: { type: number, range: [0, 1], required: false, note: "política provisória até OQ-08" }
+
+validation:
+  - "domain mapeia para workflow (build→WF1, communicate→WF2, operate→WF3)."
+  - "risk high|critical força gate humano."

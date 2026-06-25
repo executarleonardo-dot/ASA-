@@ -1,0 +1,43 @@
+schema: LEO-REGISTRY-COMMAND-v2.0
+document_type: registry
+updated_by: "Follow-up v2.0 §9 — resolve OQ-01"
+
+# ---------------------------------------------------------------------------
+# (A) Comandos implementados neste pacote (v1)
+# ---------------------------------------------------------------------------
+commands_v1:
+  - { name: architect-agentic-system,        file: .claude/commands/architect-agentic-system.md,        routes_to: WF1, primary_skill: asa-admin, status: primary }
+  - { name: create-validate-agentic-system,  file: .claude/commands/create-validate-agentic-system.md,  routes_to: WF1, primary_skill: asa-admin, status: alternative }
+  - { name: wf1-build,        file: .claude/commands/wf1-build.md,        routes_to: WF1 }
+  - { name: wf2-communicate,  file: .claude/commands/wf2-communicate.md,  routes_to: WF2 }
+  - { name: wf3-operate,      file: .claude/commands/wf3-operate.md,      routes_to: WF3 }
+
+# ---------------------------------------------------------------------------
+# (B) Router canônico — 11 rotas com owner (OQ-01 CLOSED). Fonte: §9.
+# ---------------------------------------------------------------------------
+canonical_router:
+  - { command: "/3E",               owner: SKILL-SETUP-OS,                  result: onboarding_and_initial_system }
+  - { command: "/day-zero",         owner: SKILL-LEONARDO-ORCHESTRATOR,     result: current_state_and_next_three_tasks }
+  - { command: "/bom-dia",          owner: SKILL-OS-PARTNER-ADMIN,          result: daily_operating_brief }
+  - { command: "/proximas-3",       owner: SKILL-OS-PARTNER-ADMIN,          result: three_prioritized_actions }
+  - { command: "/problema",         owner: SKILL-AGENTIC-PROBLEM-SOLVING,   result: controlled_problem_solving_state }
+  - { command: "/router-intention", owner: SKILL-META-TEMPLATE-SPECIALIST,  result: artifact_build_route }
+  - { command: "/workflow-forge",   owner: SKILL-META-TEMPLATE-SPECIALIST,  result: executable_workflow }
+  - { command: "/editorial-setup",  owner: SKILL-EDITORIAL-OS,              result: editorial_operating_stack }
+  - { command: "/generate-week",    owner: SKILL-DESK-OS,                   result: weekly_DESK_OS }
+  - { command: "/recycle",          owner: SKILL-DESK-OS,                   result: reconciled_week_and_next_cycle }
+  - { command: "CMD-01-PPS",        owner: SKILL-CMD-01-PPS,                result: packaged_release }
+
+# ---------------------------------------------------------------------------
+# (C) Biblioteca ampliada por skill (§9)
+# ---------------------------------------------------------------------------
+expanded_library:
+  SKILL-SETUP-OS: [/3E, /status, /prisma, /stack]
+  SKILL-LEONARDO-ORCHESTRATOR: [/day-zero, /gate-zero, /next-3-tasks, /build-doc, /decision-check, /update-tracker, /claims-check, /editorial-week, /export-package]
+  SKILL-OS-PARTNER-ADMIN: [/iniciar, /bom-dia, /status, /proximas-3, /fechar-dia, /bmc-wide-search, /package-release]
+  SKILL-AGENTIC-PROBLEM-SOLVING: ["/problema (família)"]
+  SKILL-META-TEMPLATE-SPECIALIST: [/router-intention, /widesearch-primary, /forge-specialist, /template-system, /gap-capability-map, /cmd-goldstandard, /schema-forge, /workflow-forge, /script-spec, /skill-package, /admin-os-productize]
+  SKILL-EDITORIAL-OS: [/editorial-setup, /sprint, /derive, /produce, /review, /analytics, /evolve, /vgen, /handoff-design, /handoff-code]
+  SKILL-DESK-OS: [/preflight, /generate-week, /render, /route-qr, /start-day, /status, /close-day, /recycle, /health]
+
+oq01_resolution: "Função dos comandos definida pelo router canônico com owners; sem invenção. CLOSED."

@@ -1,0 +1,20 @@
+schema: LEO-SCHEMA-CONTEXT-v1.0
+document_type: schema
+title: "Context Cascade (9 camadas, 0–8)"
+source: "AGENT_BUILD_SPEC §10 / ADR-004"
+
+context_resolution_order:
+  - { layer: 0, id: constitution, variability: fixed }
+  - { layer: 1, id: operational_identity, variability: fixed }
+  - { layer: 2, id: environment, variability: semi_stable_verify_per_session }
+  - { layer: 3, id: project, variability: variable }
+  - { layer: 4, id: use_case, variability: variable }
+  - { layer: 5, id: problem, variability: variable }
+  - { layer: 6, id: temporary_specialist, variability: dynamic }
+  - { layer: 7, id: workflow, variability: dynamic }
+  - { layer: 8, id: state, variability: dynamic }
+
+rules:
+  - "Recuperar apenas o contexto necessário para a tarefa atual (cascata)."
+  - "Camada 2 (Ambiente) deve ser verificada por sessão pelo Environment Resolver."
+  - "Registrar quais camadas foram usadas no execution_trace (context_layers_used)."

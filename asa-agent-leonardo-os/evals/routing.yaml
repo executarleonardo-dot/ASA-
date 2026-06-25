@@ -1,0 +1,31 @@
+schema: LEO-EVAL-v1.0
+name: routing
+source: "AGENT_BUILD_SPEC §15.2"
+
+cases:
+  - input: "criar/desenvolver/arquitetar"
+    expect_route: WF1
+  - input: "resultado validado vira conteúdo"
+    expect_route: WF2
+  - input: "distribuir/analisar/decidir/reciclar"
+    expect_route: WF3
+  - input: "tarefa simples sem especialização"
+    expect_route: direct_answer
+  - input: "padrão repetível"
+    expect_route: command_or_skill
+  - input: "contexto isolado / raciocínio especializado"
+    expect_route: skill_or_temporary_specialist
+  - input: "ação externa"
+    expect_route: connector
+    expect_confirmation: true
+  - input: "alto risco"
+    expect_route: human_gate
+    expect_mandatory: true
+
+primary_skill_routing:
+  - input: "engenharia de agente/Skill"
+    expect_primary_skill: asa-admin
+  - input: "briefing/semana/prioridade"
+    expect_primary_skill: leonardo-admin
+  - input: "handoff/mapa semanal"
+    expect_primary_skill: deskos

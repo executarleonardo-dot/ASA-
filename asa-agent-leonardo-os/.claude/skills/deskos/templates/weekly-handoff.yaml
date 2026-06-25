@@ -1,0 +1,22 @@
+schema: LEO-SCHEMA-DESKOS-HANDOFF-v1.0
+# Template de handoff semanal DeskOS — preencher por execução.
+deskos_handoff:
+  handoff_id: ""
+  date: ""
+  workflow:
+    id: ""
+    name: ""
+    stage:
+      number: 1
+      name: ""
+  system_activity: ""
+  user_action_required: ""        # ou "Nenhuma ação"
+  next_gate: ""
+  primary_deliverable: ""
+  status: preparing               # preparing|executing|awaiting|validating|completed|blocked
+  blocker: ""
+  evidence_refs: []
+  recycle:
+    classification: ""            # transient|project_specific|permanent_preference|reusable_procedure
+    carry_forward: false
+    notes: ""

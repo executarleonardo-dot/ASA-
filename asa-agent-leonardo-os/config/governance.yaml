@@ -1,0 +1,47 @@
+schema: LEO-CONFIG-GOVERNANCE-v1.0
+document_type: config
+source: "AGENT_BUILD_SPEC §18"
+
+governance:
+  never_invent_missing_data: true
+  external_action_requires_confirmation: true
+  distinguish_fact_hypothesis_gap: true
+  never_claim_unverified_execution: true
+  memory_write_requires_confirmation: true
+  destructive_action_requires_confirmation: true
+  least_privilege: true
+  max_correction_attempts: 3
+
+epistemic_labels:
+  - "[FATO]"
+  - "[INFERÊNCIA]"
+  - "[HIPÓTESE]"
+  - "[GAP]"
+  - "[LACUNA]"
+
+confirmation_required_actions:
+  - publish
+  - send
+  - deliver_to_client
+  - write_linear
+  - write_drive
+  - write_github
+  - write_gmail
+  - write_notion
+  - memory_change
+  - financial_action
+  - deletion
+  - overwrite
+  - deploy
+  - irreversible_operation
+  - write_master_spreadsheet
+
+human_in_the_loop:
+  principle: proportional_to_risk
+  rule: "Quanto maior impacto, irreversibilidade ou incerteza, maior o nível de confirmação."
+
+evidence_rule:
+  principle: evidence_before_conclusion
+  notes:
+    - "Arquivo criado não significa produto validado."
+    - "Registro não significa execução confirmada."

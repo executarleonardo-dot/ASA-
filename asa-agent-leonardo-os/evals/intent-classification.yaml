@@ -1,0 +1,20 @@
+schema: LEO-EVAL-v1.0
+name: intent-classification
+target:
+  accuracy: 0.90
+  sample_minimum: 30
+runtime_note: "[GAP-RUNTIME] GR-05 — acurácia medida no Claude.ai."
+
+cases:
+  - input: "Crie uma Skill para diagnosticar uma PME."
+    expect: { domain: build, use_case: build, complexity: compound, risk: low }
+  - input: "Transforme o produto validado em case."
+    expect: { domain: communicate, use_case: write, complexity: compound, risk: medium }
+  - input: "Analise o feedback e decida o próximo ciclo."
+    expect: { domain: operate, use_case: review, complexity: compound, risk: medium }
+  - input: "Abra minha semana com base nos três projetos ativos."
+    expect: { domain: build, use_case: administer, complexity: compound, risk: low }
+  - input: "Gere o handoff para o DeskOS."
+    expect: { domain: operate, use_case: administer, complexity: simple, risk: low }
+  - input: "Publique isso no LinkedIn agora."
+    expect: { domain: communicate, use_case: write, complexity: simple, risk: high }

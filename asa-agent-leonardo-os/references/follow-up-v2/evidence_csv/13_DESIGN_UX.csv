@@ -1,0 +1,12 @@
+﻿13 · DESIGN / UX,,,,,,,
+"Design System, wireframes, geometria. Primario DESK-OS, reutilizavel.",,,,,,,
+OBJETIVO,Consolidar ativos do cluster.,,,,,,
+PROXIMA ACAO,Validar inferencias.,,DONO,Leonardo,STATUS,WORKING,
+item_id,item_name,program_id,product_id,item_type,status,authority,source_file
+FILE-016,Desing_System_.txt,PRG-DESK-OS,PRD-DESK-OS,DESIGN_SYSTEM,REVIEW_REQUIRED,REFERENCE,Desing_System_.txt
+FILE-032,Propostas_de_wirfremes_.txt,PRG-DESK-OS,PRD-DESK-OS,WIREFRAME,CONFIRMED,WORKING,Propostas_de_wirfremes_.txt
+FILE-039,SOT_DESING_SYSTEM,PRG-DESK-OS,PRD-DESK-OS,DESIGN_SYSTEM,REVIEW_REQUIRED,WORKING,SOT_DESING_SYSTEM
+FILE-050,Wireframe,PRG-DESK-OS,PRD-DESK-OS,WIREFRAME,CONFIRMED,WORKING,Wireframe
+FILE-051,Wireframe_2,PRG-DESK-OS,PRD-DESK-OS,WIREFRAME,CONFIRMED,WORKING,Wireframe_2
+,,,,,,,
+<- VOLTAR AO WORKSPACE,,,,,,,
